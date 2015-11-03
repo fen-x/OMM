@@ -14,6 +14,7 @@
 		5270A9B71BE6A5EA00B52DB8 /* SubscriptKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270A9B61BE6A5EA00B52DB8 /* SubscriptKey.swift */; };
 		5270A9B91BE6A8DA00B52DB8 /* ScalarType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270A9B81BE6A8DA00B52DB8 /* ScalarType.swift */; };
 		5270A9BB1BE9465A00B52DB8 /* NodeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270A9BA1BE9465A00B52DB8 /* NodeType.swift */; };
+		5270A9BD1BE94A5A00B52DB8 /* MappingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270A9BC1BE94A5A00B52DB8 /* MappingError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		5270A9B61BE6A5EA00B52DB8 /* SubscriptKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptKey.swift; sourceTree = "<group>"; };
 		5270A9B81BE6A8DA00B52DB8 /* ScalarType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScalarType.swift; sourceTree = "<group>"; };
 		5270A9BA1BE9465A00B52DB8 /* NodeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeType.swift; sourceTree = "<group>"; };
+		5270A9BC1BE94A5A00B52DB8 /* MappingError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappingError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				5270A9BA1BE9465A00B52DB8 /* NodeType.swift */,
 				5270A9B81BE6A8DA00B52DB8 /* ScalarType.swift */,
 				5270A9B61BE6A5EA00B52DB8 /* SubscriptKey.swift */,
+				5270A9BC1BE94A5A00B52DB8 /* MappingError.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				5270A9BB1BE9465A00B52DB8 /* NodeType.swift in Sources */,
 				5270A9B71BE6A5EA00B52DB8 /* SubscriptKey.swift in Sources */,
 				5270A9B91BE6A8DA00B52DB8 /* ScalarType.swift in Sources */,
+				5270A9BD1BE94A5A00B52DB8 /* MappingError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
