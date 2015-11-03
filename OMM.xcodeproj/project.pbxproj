@@ -13,6 +13,7 @@
 		5270A9DF1BE988D900B52DB8 /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 5270A9A81BE0402000B52DB8 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5270A9B71BE6A5EA00B52DB8 /* SubscriptKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270A9B61BE6A5EA00B52DB8 /* SubscriptKey.swift */; };
 		5270A9B91BE6A8DA00B52DB8 /* ScalarType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270A9B81BE6A8DA00B52DB8 /* ScalarType.swift */; };
+		5270A9BB1BE9465A00B52DB8 /* NodeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270A9BA1BE9465A00B52DB8 /* NodeType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		5270A9A81BE0402000B52DB8 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = ../Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		5270A9B61BE6A5EA00B52DB8 /* SubscriptKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptKey.swift; sourceTree = "<group>"; };
 		5270A9B81BE6A8DA00B52DB8 /* ScalarType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScalarType.swift; sourceTree = "<group>"; };
+		5270A9BA1BE9465A00B52DB8 /* NodeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,8 +122,9 @@
 		5270A9B51BE6A54A00B52DB8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				5270A9B61BE6A5EA00B52DB8 /* SubscriptKey.swift */,
+				5270A9BA1BE9465A00B52DB8 /* NodeType.swift */,
 				5270A9B81BE6A8DA00B52DB8 /* ScalarType.swift */,
+				5270A9B61BE6A5EA00B52DB8 /* SubscriptKey.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5270A9BB1BE9465A00B52DB8 /* NodeType.swift in Sources */,
 				5270A9B71BE6A5EA00B52DB8 /* SubscriptKey.swift in Sources */,
 				5270A9B91BE6A8DA00B52DB8 /* ScalarType.swift in Sources */,
 			);
