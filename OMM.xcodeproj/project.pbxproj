@@ -26,6 +26,7 @@
 		5270A9E61BE9977C00B52DB8 /* SequenceType+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270A9E51BE9977C00B52DB8 /* SequenceType+Utils.swift */; };
 		5296B09A1BEC04BF001EE115 /* UndefinedValueError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296B0991BEC04BF001EE115 /* UndefinedValueError.swift */; };
 		5296B09C1BEC04DA001EE115 /* NullValueError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296B09B1BEC04DA001EE115 /* NullValueError.swift */; };
+		5296B09E1BEC051B001EE115 /* UnexpectedTypeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296B09D1BEC051B001EE115 /* UnexpectedTypeError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		5270A9E51BE9977C00B52DB8 /* SequenceType+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SequenceType+Utils.swift"; sourceTree = "<group>"; };
 		5296B0991BEC04BF001EE115 /* UndefinedValueError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UndefinedValueError.swift; sourceTree = "<group>"; };
 		5296B09B1BEC04DA001EE115 /* NullValueError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullValueError.swift; sourceTree = "<group>"; };
+		5296B09D1BEC051B001EE115 /* UnexpectedTypeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnexpectedTypeError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				5270A9BC1BE94A5A00B52DB8 /* MappingError.swift */,
 				5296B0991BEC04BF001EE115 /* UndefinedValueError.swift */,
 				5296B09B1BEC04DA001EE115 /* NullValueError.swift */,
+				5296B09D1BEC051B001EE115 /* UnexpectedTypeError.swift */,
 				5270A9BE1BE9577F00B52DB8 /* ErrorNode.swift */,
 				5270A9E31BE995C300B52DB8 /* Indexable+Utils.swift */,
 				5270A9E51BE9977C00B52DB8 /* SequenceType+Utils.swift */,
@@ -303,6 +306,7 @@
 				5296B09A1BEC04BF001EE115 /* UndefinedValueError.swift in Sources */,
 				5270A9E41BE995C300B52DB8 /* Indexable+Utils.swift in Sources */,
 				5270A9E61BE9977C00B52DB8 /* SequenceType+Utils.swift in Sources */,
+				5296B09E1BEC051B001EE115 /* UnexpectedTypeError.swift in Sources */,
 				5270A9BB1BE9465A00B52DB8 /* NodeType.swift in Sources */,
 				5270A9B71BE6A5EA00B52DB8 /* SubscriptKey.swift in Sources */,
 				5270A9B91BE6A8DA00B52DB8 /* ScalarType.swift in Sources */,
