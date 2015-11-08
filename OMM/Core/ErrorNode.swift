@@ -32,3 +32,17 @@ struct ErrorNode: NodeType {
     }
 
 }
+
+extension ErrorNode {
+
+    init(error: ErrorType, path: [SubscriptKey], recoverable: Bool) {
+        self.init(
+            error: MappingError(
+                underlyingError: error,
+                path: path
+            ),
+            recoverable: recoverable
+        )
+    }
+
+}

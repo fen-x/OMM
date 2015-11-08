@@ -15,51 +15,64 @@ import OMM
 class ErrorNodeTests: XCTestCase {
 
     func test_SubscriptReturnsSameErrorNodeForAnyKey() {
-        let node = errorNode()
+        let node = ErrorNode(
+            error: DummyError(),
+            path: [0, "test", 1],
+            recoverable: true
+        )
 
         expect(node[42] as? ErrorNode) == node
         expect(node[""] as? ErrorNode) == node
     }
 
     func test_OptionalPropertyReturnsNilIfNodeIsRecoverable() {
-        let node = errorNode(recoverable: true)
+        let node = ErrorNode(
+            error: DummyError(),
+            path: [0, "test", 1],
+            recoverable: true
+        )
 
         expect(node.optional as? ErrorNode).to(beNil())
     }
 
     func test_OptionalPropertyReturnsSameNodeIfItIsNotRecoverable() {
-        let node = errorNode(recoverable: false)
+        let node = ErrorNode(
+            error: DummyError(),
+            path: [0, "test", 1],
+            recoverable: false
+        )
 
         expect(node.optional as? ErrorNode) == node
     }
 
     func test_ValueMethodThrowsGivenMappingError() {
-        let node = errorNode()
+        let node = ErrorNode(
+            error: DummyError(),
+            path: [0, "test", 1],
+            recoverable: true
+        )
 
         expect(try node.value() as DummyScalar).to(throwError(node.error))
     }
 
     func test_ArrayMethodThrowsGivenMappingError() {
-        let node = errorNode()
+        let node = ErrorNode(
+            error: DummyError(),
+            path: [0, "test", 1],
+            recoverable: true
+        )
 
         expect(try node.array()).to(throwError(node.error))
     }
 
     func test_DictionaryMethodThrowsGivenMappingError() {
-        let node = errorNode()
+        let node = ErrorNode(
+            error: DummyError(),
+            path: [0, "test", 1],
+            recoverable: true
+        )
 
         expect(try node.dictionary()).to(throwError(node.error))
     }
 
-}
-
-private
-func errorNode(recoverable recoverable: Bool = true) -> ErrorNode {
-    return ErrorNode(
-        error: MappingError(
-            underlyingError: DummyError(),
-            path: [0, "test", 1]
-        ),
-        recoverable: recoverable
-    )
 }
