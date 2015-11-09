@@ -17,7 +17,6 @@
 		5270A9BF1BE9577F00B52DB8 /* ErrorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270A9BE1BE9577F00B52DB8 /* ErrorNode.swift */; };
 		5270A9C21BE9598300B52DB8 /* ErrorNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270A9C11BE9598300B52DB8 /* ErrorNodeTests.swift */; };
 		5270A9C51BE95C1100B52DB8 /* DummyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270A9C41BE95C1100B52DB8 /* DummyError.swift */; };
-		5270A9D51BE9800700B52DB8 /* ErrorType+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270A9D41BE9800700B52DB8 /* ErrorType+Equatable.swift */; };
 		5270A9D71BE980A200B52DB8 /* MappingError+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270A9D61BE980A200B52DB8 /* MappingError+Equatable.swift */; };
 		5270A9D91BE9840500B52DB8 /* ErrorNode+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270A9D81BE9840500B52DB8 /* ErrorNode+Equatable.swift */; };
 		5270A9DB1BE9853F00B52DB8 /* DummyScalar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270A9DA1BE9853F00B52DB8 /* DummyScalar.swift */; };
@@ -68,7 +67,6 @@
 		5270A9BE1BE9577F00B52DB8 /* ErrorNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorNode.swift; sourceTree = "<group>"; };
 		5270A9C11BE9598300B52DB8 /* ErrorNodeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorNodeTests.swift; sourceTree = "<group>"; };
 		5270A9C41BE95C1100B52DB8 /* DummyError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyError.swift; sourceTree = "<group>"; };
-		5270A9D41BE9800700B52DB8 /* ErrorType+Equatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ErrorType+Equatable.swift"; sourceTree = "<group>"; };
 		5270A9D61BE980A200B52DB8 /* MappingError+Equatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MappingError+Equatable.swift"; sourceTree = "<group>"; };
 		5270A9D81BE9840500B52DB8 /* ErrorNode+Equatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ErrorNode+Equatable.swift"; sourceTree = "<group>"; };
 		5270A9DA1BE9853F00B52DB8 /* DummyScalar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyScalar.swift; sourceTree = "<group>"; };
@@ -187,7 +185,6 @@
 			children = (
 				5270A9D81BE9840500B52DB8 /* ErrorNode+Equatable.swift */,
 				5270A9D61BE980A200B52DB8 /* MappingError+Equatable.swift */,
-				5270A9D41BE9800700B52DB8 /* ErrorType+Equatable.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -321,7 +318,6 @@
 				5270A9C21BE9598300B52DB8 /* ErrorNodeTests.swift in Sources */,
 				5270A9C51BE95C1100B52DB8 /* DummyError.swift in Sources */,
 				5270A9D71BE980A200B52DB8 /* MappingError+Equatable.swift in Sources */,
-				5270A9D51BE9800700B52DB8 /* ErrorType+Equatable.swift in Sources */,
 				5270A9DB1BE9853F00B52DB8 /* DummyScalar.swift in Sources */,
 				5270A9D91BE9840500B52DB8 /* ErrorNode+Equatable.swift in Sources */,
 			);

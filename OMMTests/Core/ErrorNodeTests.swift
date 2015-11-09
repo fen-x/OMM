@@ -52,7 +52,9 @@ class ErrorNodeTests: XCTestCase {
             recoverable: true
         )
 
-        expect(try node.value() as DummyScalar).to(throwError(node.error))
+        expect(try node.value() as DummyScalar).to(throwError { (error: MappingError) in
+            expect(error) == node.error
+        })
     }
 
     func test_ArrayMethodThrowsGivenMappingError() {
@@ -62,7 +64,9 @@ class ErrorNodeTests: XCTestCase {
             recoverable: true
         )
 
-        expect(try node.array()).to(throwError(node.error))
+        expect(try node.array()).to(throwError { (error: MappingError) in
+            expect(error) == node.error
+        })
     }
 
     func test_DictionaryMethodThrowsGivenMappingError() {
@@ -72,7 +76,9 @@ class ErrorNodeTests: XCTestCase {
             recoverable: true
         )
 
-        expect(try node.dictionary()).to(throwError(node.error))
+        expect(try node.dictionary()).to(throwError { (error: MappingError) in
+            expect(error) == node.error
+        })
     }
 
 }
