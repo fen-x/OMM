@@ -17,6 +17,7 @@
 		522DBC6D1BF15D6E00FE30E4 /* Factory+JSONSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DBC6C1BF15D6E00FE30E4 /* Factory+JSONSerialization.swift */; };
 		522DBC6F1BF15EEB00FE30E4 /* DateFromSecondsTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DBC6E1BF15EEB00FE30E4 /* DateFromSecondsTransform.swift */; };
 		522DBC711BF15F4100FE30E4 /* DateFromMillisecondsTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DBC701BF15F4100FE30E4 /* DateFromMillisecondsTransform.swift */; };
+		522DBC731BF15FF800FE30E4 /* DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DBC721BF15FF800FE30E4 /* DateTransform.swift */; };
 		5270A98C1BE039B600B52DB8 /* OMM.h in Headers */ = {isa = PBXBuildFile; fileRef = 5270A98B1BE039B600B52DB8 /* OMM.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5270A9931BE039B600B52DB8 /* OMM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5270A9881BE039B500B52DB8 /* OMM.framework */; };
 		5270A9A91BE0402000B52DB8 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5270A9A81BE0402000B52DB8 /* Nimble.framework */; };
@@ -83,6 +84,7 @@
 		522DBC6C1BF15D6E00FE30E4 /* Factory+JSONSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Factory+JSONSerialization.swift"; sourceTree = "<group>"; };
 		522DBC6E1BF15EEB00FE30E4 /* DateFromSecondsTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFromSecondsTransform.swift; sourceTree = "<group>"; };
 		522DBC701BF15F4100FE30E4 /* DateFromMillisecondsTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFromMillisecondsTransform.swift; sourceTree = "<group>"; };
+		522DBC721BF15FF800FE30E4 /* DateTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTransform.swift; sourceTree = "<group>"; };
 		5270A9881BE039B500B52DB8 /* OMM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OMM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5270A98B1BE039B600B52DB8 /* OMM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMM.h; sourceTree = "<group>"; };
 		5270A98D1BE039B600B52DB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				522DBC651BF15B3100FE30E4 /* URLTransform.swift */,
 				522DBC6E1BF15EEB00FE30E4 /* DateFromSecondsTransform.swift */,
 				522DBC701BF15F4100FE30E4 /* DateFromMillisecondsTransform.swift */,
+				522DBC721BF15FF800FE30E4 /* DateTransform.swift */,
 			);
 			name = Transforms;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5270A9BF1BE9577F00B52DB8 /* ErrorNode.swift in Sources */,
+				522DBC731BF15FF800FE30E4 /* DateTransform.swift in Sources */,
 				522DBC5D1BF1583D00FE30E4 /* Mappable.swift in Sources */,
 				5296B09C1BEC04DA001EE115 /* NullValueError.swift in Sources */,
 				5296B09A1BEC04BF001EE115 /* UndefinedValueError.swift in Sources */,
