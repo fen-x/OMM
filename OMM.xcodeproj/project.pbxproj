@@ -18,6 +18,7 @@
 		522DBC6F1BF15EEB00FE30E4 /* DateFromSecondsTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DBC6E1BF15EEB00FE30E4 /* DateFromSecondsTransform.swift */; };
 		522DBC711BF15F4100FE30E4 /* DateFromMillisecondsTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DBC701BF15F4100FE30E4 /* DateFromMillisecondsTransform.swift */; };
 		522DBC731BF15FF800FE30E4 /* DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DBC721BF15FF800FE30E4 /* DateTransform.swift */; };
+		522DBC751BF1609C00FE30E4 /* IntegerTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DBC741BF1609C00FE30E4 /* IntegerTransform.swift */; };
 		5270A98C1BE039B600B52DB8 /* OMM.h in Headers */ = {isa = PBXBuildFile; fileRef = 5270A98B1BE039B600B52DB8 /* OMM.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5270A9931BE039B600B52DB8 /* OMM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5270A9881BE039B500B52DB8 /* OMM.framework */; };
 		5270A9A91BE0402000B52DB8 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5270A9A81BE0402000B52DB8 /* Nimble.framework */; };
@@ -85,6 +86,7 @@
 		522DBC6E1BF15EEB00FE30E4 /* DateFromSecondsTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFromSecondsTransform.swift; sourceTree = "<group>"; };
 		522DBC701BF15F4100FE30E4 /* DateFromMillisecondsTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFromMillisecondsTransform.swift; sourceTree = "<group>"; };
 		522DBC721BF15FF800FE30E4 /* DateTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTransform.swift; sourceTree = "<group>"; };
+		522DBC741BF1609C00FE30E4 /* IntegerTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegerTransform.swift; sourceTree = "<group>"; };
 		5270A9881BE039B500B52DB8 /* OMM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OMM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5270A98B1BE039B600B52DB8 /* OMM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMM.h; sourceTree = "<group>"; };
 		5270A98D1BE039B600B52DB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				522DBC6E1BF15EEB00FE30E4 /* DateFromSecondsTransform.swift */,
 				522DBC701BF15F4100FE30E4 /* DateFromMillisecondsTransform.swift */,
 				522DBC721BF15FF800FE30E4 /* DateTransform.swift */,
+				522DBC741BF1609C00FE30E4 /* IntegerTransform.swift */,
 			);
 			name = Transforms;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				5270A9E41BE995C300B52DB8 /* Indexable+Utils.swift in Sources */,
 				522DBC611BF158CB00FE30E4 /* MappableTransform.swift in Sources */,
 				522DBC5F1BF1588300FE30E4 /* NodeType+Mappable.swift in Sources */,
+				522DBC751BF1609C00FE30E4 /* IntegerTransform.swift in Sources */,
 				5270A9E61BE9977C00B52DB8 /* SequenceType+Utils.swift in Sources */,
 				5296B09E1BEC051B001EE115 /* UnexpectedTypeError.swift in Sources */,
 				5270A9BB1BE9465A00B52DB8 /* NodeType.swift in Sources */,
