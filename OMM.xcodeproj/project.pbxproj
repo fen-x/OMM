@@ -31,6 +31,8 @@
 		5296B09E1BEC051B001EE115 /* UnexpectedTypeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296B09D1BEC051B001EE115 /* UnexpectedTypeError.swift */; };
 		5296B0A01BEF7FB0001EE115 /* ValueNode+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296B09F1BEF7FB0001EE115 /* ValueNode+Equatable.swift */; };
 		5296B0A41BEF8660001EE115 /* FactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296B0A31BEF8660001EE115 /* FactoryTests.swift */; };
+		52CDEC741BF14F1E008165F2 /* TransformType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CDEC731BF14F1E008165F2 /* TransformType.swift */; };
+		52CDEC761BF1509B008165F2 /* TransformError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CDEC751BF1509B008165F2 /* TransformError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		5296B09D1BEC051B001EE115 /* UnexpectedTypeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnexpectedTypeError.swift; sourceTree = "<group>"; };
 		5296B09F1BEF7FB0001EE115 /* ValueNode+Equatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ValueNode+Equatable.swift"; sourceTree = "<group>"; };
 		5296B0A31BEF8660001EE115 /* FactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactoryTests.swift; sourceTree = "<group>"; };
+		52CDEC731BF14F1E008165F2 /* TransformType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformType.swift; sourceTree = "<group>"; };
+		52CDEC751BF1509B008165F2 /* TransformError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,10 +166,12 @@
 				5270A9BA1BE9465A00B52DB8 /* NodeType.swift */,
 				5270A9B81BE6A8DA00B52DB8 /* ScalarType.swift */,
 				5270A9B61BE6A5EA00B52DB8 /* SubscriptKey.swift */,
+				52CDEC731BF14F1E008165F2 /* TransformType.swift */,
 				5270A9BC1BE94A5A00B52DB8 /* MappingError.swift */,
 				5296B0991BEC04BF001EE115 /* UndefinedValueError.swift */,
 				5296B09B1BEC04DA001EE115 /* NullValueError.swift */,
 				5296B09D1BEC051B001EE115 /* UnexpectedTypeError.swift */,
+				52CDEC751BF1509B008165F2 /* TransformError.swift */,
 				5270A9BE1BE9577F00B52DB8 /* ErrorNode.swift */,
 				5270A9E01BE98EC700B52DB8 /* ValueNode.swift */,
 				5296B0951BEA7045001EE115 /* Factory.swift */,
@@ -316,6 +322,8 @@
 				5270A9BF1BE9577F00B52DB8 /* ErrorNode.swift in Sources */,
 				5296B09C1BEC04DA001EE115 /* NullValueError.swift in Sources */,
 				5296B09A1BEC04BF001EE115 /* UndefinedValueError.swift in Sources */,
+				52CDEC761BF1509B008165F2 /* TransformError.swift in Sources */,
+				52CDEC741BF14F1E008165F2 /* TransformType.swift in Sources */,
 				5270A9E41BE995C300B52DB8 /* Indexable+Utils.swift in Sources */,
 				5270A9E61BE9977C00B52DB8 /* SequenceType+Utils.swift in Sources */,
 				5296B09E1BEC051B001EE115 /* UnexpectedTypeError.swift in Sources */,
