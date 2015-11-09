@@ -37,6 +37,16 @@ struct ValueNode: NodeType {
         return try castedSource()
     }
 
+    func value<T: TransformType>(transformedWith transform: T) throws -> T.Value {
+        do {
+            return try transform.applyToNode(self)
+        } catch let error as MappingError {
+            throw error
+        } catch {
+            throw MappingError(underlyingError: error, path: path)
+        }
+    }
+
     private
     func sourceForKey(key: SubscriptKey) throws -> AnyObject? {
         switch key {
@@ -53,8 +63,6 @@ struct ValueNode: NodeType {
     func castedSource<T>() throws -> T {
         do {
             return try cast(source)
-        } catch let error as MappingError {
-            throw error
         } catch {
             throw MappingError(underlyingError: error, path: path)
         }

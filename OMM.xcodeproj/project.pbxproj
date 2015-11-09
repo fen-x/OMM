@@ -33,6 +33,9 @@
 		5296B0A41BEF8660001EE115 /* FactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296B0A31BEF8660001EE115 /* FactoryTests.swift */; };
 		52CDEC741BF14F1E008165F2 /* TransformType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CDEC731BF14F1E008165F2 /* TransformType.swift */; };
 		52CDEC761BF1509B008165F2 /* TransformError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CDEC751BF1509B008165F2 /* TransformError.swift */; };
+		52CDEC781BF15343008165F2 /* DummyTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CDEC771BF15342008165F2 /* DummyTransform.swift */; };
+		52CDEC7A1BF15406008165F2 /* DummySuccessTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CDEC791BF15406008165F2 /* DummySuccessTransform.swift */; };
+		52CDEC7C1BF15564008165F2 /* DummyFailedTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CDEC7B1BF15564008165F2 /* DummyFailedTransform.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +92,9 @@
 		5296B0A31BEF8660001EE115 /* FactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactoryTests.swift; sourceTree = "<group>"; };
 		52CDEC731BF14F1E008165F2 /* TransformType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformType.swift; sourceTree = "<group>"; };
 		52CDEC751BF1509B008165F2 /* TransformError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformError.swift; sourceTree = "<group>"; };
+		52CDEC771BF15342008165F2 /* DummyTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyTransform.swift; sourceTree = "<group>"; };
+		52CDEC791BF15406008165F2 /* DummySuccessTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummySuccessTransform.swift; sourceTree = "<group>"; };
+		52CDEC7B1BF15564008165F2 /* DummyFailedTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyFailedTransform.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +202,9 @@
 			children = (
 				5270A9C41BE95C1100B52DB8 /* DummyError.swift */,
 				5270A9DA1BE9853F00B52DB8 /* DummyScalar.swift */,
+				52CDEC771BF15342008165F2 /* DummyTransform.swift */,
+				52CDEC791BF15406008165F2 /* DummySuccessTransform.swift */,
+				52CDEC7B1BF15564008165F2 /* DummyFailedTransform.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -341,12 +350,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5270A9C21BE9598300B52DB8 /* ErrorNodeTests.swift in Sources */,
+				52CDEC781BF15343008165F2 /* DummyTransform.swift in Sources */,
 				5270A9C51BE95C1100B52DB8 /* DummyError.swift in Sources */,
+				52CDEC7A1BF15406008165F2 /* DummySuccessTransform.swift in Sources */,
 				5270A9D71BE980A200B52DB8 /* MappingError+Equatable.swift in Sources */,
 				5296B0A41BEF8660001EE115 /* FactoryTests.swift in Sources */,
 				5270A9DB1BE9853F00B52DB8 /* DummyScalar.swift in Sources */,
 				5296B0981BEA9922001EE115 /* ValueNodeTests.swift in Sources */,
 				5296B0A01BEF7FB0001EE115 /* ValueNode+Equatable.swift in Sources */,
+				52CDEC7C1BF15564008165F2 /* DummyFailedTransform.swift in Sources */,
 				5270A9D91BE9840500B52DB8 /* ErrorNode+Equatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

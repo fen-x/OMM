@@ -31,6 +31,10 @@ struct ErrorNode: NodeType {
         throw error
     }
 
+    func value<T: TransformType>(transformedWith transform: T) throws -> T.Value {
+        throw error
+    }
+
 }
 
 extension ErrorNode {

@@ -57,6 +57,18 @@ class ErrorNodeTests: XCTestCase {
         })
     }
 
+    func test_ValueTransformedWithMethodThrowsGivenMappingError() {
+        let node = ErrorNode(
+            error: DummyError(),
+            path: [0, "test", 1],
+            recoverable: true
+        )
+
+        expect(try node.value(transformedWith: DummyTransform())).to(throwError { (error: MappingError) in
+            expect(error) == node.error
+        })
+    }
+
     func test_ArrayMethodThrowsGivenMappingError() {
         let node = ErrorNode(
             error: DummyError(),

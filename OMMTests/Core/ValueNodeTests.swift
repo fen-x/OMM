@@ -91,6 +91,46 @@ class ValueNodeTests: XCTestCase {
         })
     }
 
+    func test_ValueTransformedWithMethodReturnsValueFromTransform() {
+        let node = ValueNode(
+            source: DummyScalar(),
+            path: ["test", 42]
+        )
+        let transform = DummySuccessTransform(value: 42)
+
+        expect(try node.value(transformedWith: transform)) == transform.value
+    }
+
+    func test_ValueTransformedWithMethodThrowsMappingErrorWithUnderlyingErrorFromTransform() {
+        let node = ValueNode(
+            source: DummyScalar(),
+            path: ["test", 42]
+        )
+        let transform = DummyFailedTransform(error: DummyError())
+
+        expect(try node.value(transformedWith: transform)).to(throwError { (error: MappingError) in
+            expect(error) == MappingError(
+                underlyingError: transform.error,
+                path: node.path
+            )
+        })
+    }
+
+    func test_ValueTransformedWithMethodThrowsMappingErrorFromTransform() {
+        let node = ValueNode(
+            source: DummyScalar(),
+            path: ["test", 42]
+        )
+        let transform = DummyFailedTransform(error: MappingError(
+            underlyingError: DummyError(),
+            path: [42, 1]
+        ))
+
+        expect(try node.value(transformedWith: transform)).to(throwError { (error: MappingError) in
+            expect(error) == transform.error
+        })
+    }
+
     func test_ArrayMethodReturnsArrayOfNodesWithSourcesFromOriginalArray() {
         let node = ValueNode(
             source: [42],
