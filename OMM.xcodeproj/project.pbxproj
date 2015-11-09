@@ -11,6 +11,7 @@
 		522DBC5F1BF1588300FE30E4 /* NodeType+Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DBC5E1BF1588300FE30E4 /* NodeType+Mappable.swift */; };
 		522DBC611BF158CB00FE30E4 /* MappableTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DBC601BF158CB00FE30E4 /* MappableTransform.swift */; };
 		522DBC641BF15A8700FE30E4 /* RawRepresentableTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DBC631BF15A8700FE30E4 /* RawRepresentableTransform.swift */; };
+		522DBC6D1BF15D6E00FE30E4 /* Factory+JSONSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DBC6C1BF15D6E00FE30E4 /* Factory+JSONSerialization.swift */; };
 		5270A98C1BE039B600B52DB8 /* OMM.h in Headers */ = {isa = PBXBuildFile; fileRef = 5270A98B1BE039B600B52DB8 /* OMM.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5270A9931BE039B600B52DB8 /* OMM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5270A9881BE039B500B52DB8 /* OMM.framework */; };
 		5270A9A91BE0402000B52DB8 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5270A9A81BE0402000B52DB8 /* Nimble.framework */; };
@@ -71,6 +72,7 @@
 		522DBC5E1BF1588300FE30E4 /* NodeType+Mappable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NodeType+Mappable.swift"; sourceTree = "<group>"; };
 		522DBC601BF158CB00FE30E4 /* MappableTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappableTransform.swift; sourceTree = "<group>"; };
 		522DBC631BF15A8700FE30E4 /* RawRepresentableTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RawRepresentableTransform.swift; sourceTree = "<group>"; };
+		522DBC6C1BF15D6E00FE30E4 /* Factory+JSONSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Factory+JSONSerialization.swift"; sourceTree = "<group>"; };
 		5270A9881BE039B500B52DB8 /* OMM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OMM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5270A98B1BE039B600B52DB8 /* OMM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMM.h; sourceTree = "<group>"; };
 		5270A98D1BE039B600B52DB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -143,6 +145,14 @@
 			name = Transforms;
 			sourceTree = "<group>";
 		};
+		522DBC671BF15BC100FE30E4 /* JOSN */ = {
+			isa = PBXGroup;
+			children = (
+				522DBC6C1BF15D6E00FE30E4 /* Factory+JSONSerialization.swift */,
+			);
+			name = JOSN;
+			sourceTree = "<group>";
+		};
 		5270A97E1BE039B500B52DB8 = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +178,7 @@
 				5270A98D1BE039B600B52DB8 /* Info.plist */,
 				5270A98B1BE039B600B52DB8 /* OMM.h */,
 				5270A9B51BE6A54A00B52DB8 /* Core */,
+				522DBC671BF15BC100FE30E4 /* JOSN */,
 				522DBC5B1BF1581800FE30E4 /* Mappable */,
 				522DBC621BF15A5000FE30E4 /* Transforms */,
 			);
@@ -360,6 +371,7 @@
 				522DBC5D1BF1583D00FE30E4 /* Mappable.swift in Sources */,
 				5296B09C1BEC04DA001EE115 /* NullValueError.swift in Sources */,
 				5296B09A1BEC04BF001EE115 /* UndefinedValueError.swift in Sources */,
+				522DBC6D1BF15D6E00FE30E4 /* Factory+JSONSerialization.swift in Sources */,
 				52CDEC761BF1509B008165F2 /* TransformError.swift in Sources */,
 				52CDEC741BF14F1E008165F2 /* TransformType.swift in Sources */,
 				522DBC641BF15A8700FE30E4 /* RawRepresentableTransform.swift in Sources */,
