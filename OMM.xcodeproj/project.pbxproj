@@ -148,7 +148,7 @@
 				522DBC601BF158CB00FE30E4 /* MappableTransform.swift */,
 				522DBC5E1BF1588300FE30E4 /* NodeType+Mappable.swift */,
 			);
-			name = Mappable;
+			path = Mappable;
 			sourceTree = "<group>";
 		};
 		522DBC621BF15A5000FE30E4 /* Transforms */ = {
@@ -161,17 +161,17 @@
 				522DBC721BF15FF800FE30E4 /* DateTransform.swift */,
 				522DBC741BF1609C00FE30E4 /* IntegerTransform.swift */,
 			);
-			name = Transforms;
+			path = Transforms;
 			sourceTree = "<group>";
 		};
-		522DBC671BF15BC100FE30E4 /* JOSN */ = {
+		522DBC671BF15BC100FE30E4 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
 				522DBC681BF15BEB00FE30E4 /* ScalarType+StringBridgable.swift */,
 				522DBC6A1BF15CE100FE30E4 /* ScalarType+NumberBridgable.swift */,
 				522DBC6C1BF15D6E00FE30E4 /* Factory+JSONSerialization.swift */,
 			);
-			name = JOSN;
+			path = JSON;
 			sourceTree = "<group>";
 		};
 		5270A97E1BE039B500B52DB8 = {
@@ -199,7 +199,7 @@
 				5270A98D1BE039B600B52DB8 /* Info.plist */,
 				5270A98B1BE039B600B52DB8 /* OMM.h */,
 				5270A9B51BE6A54A00B52DB8 /* Core */,
-				522DBC671BF15BC100FE30E4 /* JOSN */,
+				522DBC671BF15BC100FE30E4 /* JSON */,
 				522DBC5B1BF1581800FE30E4 /* Mappable */,
 				522DBC621BF15A5000FE30E4 /* Transforms */,
 			);
@@ -276,7 +276,7 @@
 				5270A9D81BE9840500B52DB8 /* ErrorNode+Equatable.swift */,
 				5270A9D61BE980A200B52DB8 /* MappingError+Equatable.swift */,
 			);
-			name = Extensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
