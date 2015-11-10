@@ -44,3 +44,16 @@ extension NodeType {
     }
     
 }
+
+public
+extension NodeType {
+
+    func array<T: ScalarType>(type: T.Type) throws -> [T] {
+        return try array().map { try $0.value(type) }
+    }
+
+    func array<T: TransformType>(transformedWith transform: T) throws -> [T.Value] {
+        return try array().map { try $0.value(transformedWith: transform) }
+    }
+
+}
