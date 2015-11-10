@@ -9,7 +9,7 @@
 public
 extension NodeType {
 
-    func value<T: Mappable>() throws -> T {
+    func value<T: Mappable>(type: T.Type) throws -> T {
         return try value(transformedWith: MappableTransform())
     }
 }
