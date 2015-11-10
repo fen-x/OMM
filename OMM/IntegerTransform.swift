@@ -21,7 +21,7 @@ struct IntegerTransform<T: IntegerType>: TransformType {
 
     public
     func applyToNode(node: NodeType) throws -> T {
-        return try transform(node.value())
+        return try transform(node.value(NSNumber))
     }
 
 }

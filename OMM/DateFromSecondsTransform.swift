@@ -6,7 +6,8 @@
 //  Copyright © 2015 Ivan Nikitin. All rights reserved.
 //
 
-import class Foundation.NSDate
+import class  Foundation.NSDate
+import struct Foundation.NSTimeInterval
 
 public
 struct DateFromSecondsTransform: TransformType {
@@ -16,7 +17,7 @@ struct DateFromSecondsTransform: TransformType {
 
     public
     func applyToNode(node: NodeType) throws -> NSDate {
-        return try NSDate(timeIntervalSince1970: node.value())
+        return try NSDate(timeIntervalSince1970: node.value(NSTimeInterval))
     }
 
 }

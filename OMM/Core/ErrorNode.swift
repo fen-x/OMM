@@ -27,7 +27,7 @@ struct ErrorNode: NodeType {
         throw error
     }
 
-    func value<T: ScalarType>() throws -> T {
+    func value<T: ScalarType>(type: T.Type) throws -> T {
         throw error
     }
 

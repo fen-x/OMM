@@ -16,7 +16,7 @@ struct URLTransform: TransformType {
 
     public
     func applyToNode(node: NodeType) throws -> NSURL {
-        guard let URL = try NSURL(string: node.value()) else {
+        guard let URL = try NSURL(string: node.value(String)) else {
             throw errorWithReason("Invalid URL")
         }
         return URL

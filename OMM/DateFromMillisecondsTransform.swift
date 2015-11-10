@@ -18,7 +18,7 @@ struct DateFromMillisecondsTransform: TransformType {
 
     public
     func applyToNode(node: NodeType) throws -> NSDate {
-        let number = try node.value() as NSNumber
+        let number = try node.value(NSNumber)
         return NSDate(timeIntervalSince1970: NSTimeInterval(number.longLongValue) / 1000)
     }
     

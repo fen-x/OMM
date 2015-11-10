@@ -17,7 +17,7 @@ protocol NodeType {
 
     func dictionary() throws -> [String: NodeType]
 
-    func value<T: ScalarType>() throws -> T
+    func value<T: ScalarType>(type: T.Type) throws -> T
 
     func value<T: TransformType>(transformedWith transform: T) throws -> T.Value
 

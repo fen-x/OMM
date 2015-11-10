@@ -33,7 +33,7 @@ struct ValueNode: NodeType {
         return dictionary.keys.toDictionary { ($0, self[.ObjectProperty($0)]) }
     }
 
-    func value<T: ScalarType>() throws -> T {
+    func value<T: ScalarType>(type: T.Type) throws -> T {
         return try castedSource()
     }
 

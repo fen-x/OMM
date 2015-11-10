@@ -18,7 +18,7 @@ struct RawRepresentableTransform<T: RawRepresentable where T.RawValue: ScalarTyp
 
     public
     func applyToNode(node: NodeType) throws -> T {
-        guard let value = try T(rawValue: node.value()) ?? defaultValue else {
+        guard let value = try T(rawValue: node.value(T.RawValue.self)) ?? defaultValue else {
             throw errorWithReason("Unexpected raw value")
         }
         return value

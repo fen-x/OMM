@@ -33,7 +33,7 @@ struct DateTransform: TransformType {
 
     public
     func applyToNode(node: NodeType) throws -> NSDate {
-        guard let value = try formatter.dateFromString(node.value()) else {
+        guard let value = try formatter.dateFromString(node.value(String)) else {
             throw errorWithReason("Unexpected date format")
         }
         return value

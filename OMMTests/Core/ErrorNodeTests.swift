@@ -52,7 +52,7 @@ class ErrorNodeTests: XCTestCase {
             recoverable: true
         )
 
-        expect(try node.value() as DummyScalar).to(throwError { (error: MappingError) in
+        expect(try node.value(DummyScalar)).to(throwError { (error: MappingError) in
             expect(error) == node.error
         })
     }

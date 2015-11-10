@@ -71,7 +71,7 @@ class ValueNodeTests: XCTestCase {
             path: ["test", 42]
         )
 
-        expect(try node.value() as DummyScalar) === node.source
+        expect(try node.value(DummyScalar)) === node.source
     }
 
     func test_ValueMethodThrowsErrorIfSourceIsNotOfValueType() {
@@ -80,7 +80,7 @@ class ValueNodeTests: XCTestCase {
             path: ["test", 42]
         )
 
-        expect(try node.value() as DummyScalar).to(throwError { (error: MappingError) in
+        expect(try node.value(DummyScalar)).to(throwError { (error: MappingError) in
             expect(error) == MappingError(
                 underlyingError: UnexpectedTypeError(
                     expectedType: DummyScalar.self,
