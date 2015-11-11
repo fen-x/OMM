@@ -9,16 +9,15 @@
 public
 struct RawRepresentableTransform<T: RawRepresentable where T.RawValue: ScalarType>: TransformType {
 
-    let defaultValue: T?
+    private
+    let transform = RawRepresentableOptionalTransform<T>()
 
     public
-    init(defaultValue: T? = nil) {
-        self.defaultValue = defaultValue
-    }
+    init() { }
 
     public
     func applyToNode(node: NodeType) throws -> T {
-        guard let value = try T(rawValue: node.value(T.RawValue.self)) ?? defaultValue else {
+        guard let value = try transform.applyToNode(node) else {
             throw errorWithReason("Unexpected raw value")
         }
         return value
