@@ -113,6 +113,11 @@ OMM is released under the [MIT License](https://raw.githubusercontent.com/fen-x/
 
 ## Installation
 
+* Using [CocoaPods](https://cocoapods.org)
+```
+pod 'OMM'
+```
+
 * Using [Carthage](https://github.com/Carthage/Carthage)
 ```
 github "fen-x/OMM"
