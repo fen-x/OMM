@@ -56,4 +56,12 @@ extension NodeType {
         return try array().map { try $0.value(transformedWith: transform) }
     }
 
+    func dictionary<T: ScalarType>(type: T.Type) throws -> [String: T] {
+        return try dictionary().toDictionary { try ($0, $1.value(type)) }
+    }
+
+    func dictionary<T: TransformType>(transformedWith transform: T) throws -> [String: T.Value] {
+        return try dictionary().toDictionary { try ($0, $1.value(transformedWith: transform)) }
+    }
+
 }

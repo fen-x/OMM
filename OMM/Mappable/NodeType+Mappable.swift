@@ -17,4 +17,8 @@ extension NodeType {
         return try array().map { try $0.value(type) }
     }
 
+    func dictionary<T: Mappable>(type: T.Type) throws -> [String: T] {
+        return try dictionary().toDictionary { try ($0, $1.value(type)) }
+    }
+
 }
