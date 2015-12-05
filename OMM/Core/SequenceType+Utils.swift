@@ -9,7 +9,7 @@
 extension SequenceType {
 
     @warn_unused_result
-    public func toDictionary<Key, Value>(@noescape transform: (Self.Generator.Element) throws -> (Key, Value)) rethrows -> [Key: Value] {
+    func toDictionary<Key, Value>(@noescape transform: (Self.Generator.Element) throws -> (Key, Value)) rethrows -> [Key: Value] {
         var result = [Key: Value]()
         for (key, value) in try map(transform) {
             result[key] = value
