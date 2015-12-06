@@ -14,7 +14,7 @@ protocol TransformType {
     typealias Value
 
     /// Transforms node to value.
-    /// - Parameter node: Integer value.
+    /// - Parameter node: Node.
     /// - Returns: Result of transformation.
     /// - Throws: Any user thrown errors.
     func applyToNode(node: NodeType) throws -> Value
