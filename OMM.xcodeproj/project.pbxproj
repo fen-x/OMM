@@ -19,6 +19,9 @@
 		522DBC711BF15F4100FE30E4 /* DateFromMillisecondsTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DBC701BF15F4100FE30E4 /* DateFromMillisecondsTransform.swift */; };
 		522DBC731BF15FF800FE30E4 /* DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DBC721BF15FF800FE30E4 /* DateTransform.swift */; };
 		522DBC751BF1609C00FE30E4 /* IntegerTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DBC741BF1609C00FE30E4 /* IntegerTransform.swift */; };
+		5239507F1C14D3DB007D08B3 /* ScalarType+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5239507E1C14D3DB007D08B3 /* ScalarType+Date.swift */; };
+		523950811C14D410007D08B3 /* ScalarType+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523950801C14D410007D08B3 /* ScalarType+Data.swift */; };
+		523950831C14D43D007D08B3 /* Factory+PropertyListSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523950821C14D43D007D08B3 /* Factory+PropertyListSerialization.swift */; };
 		52432B661BF3E7AA00454E12 /* RawRepresentableOptionalTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52432B651BF3E7AA00454E12 /* RawRepresentableOptionalTransform.swift */; };
 		5270A98C1BE039B600B52DB8 /* OMM.h in Headers */ = {isa = PBXBuildFile; fileRef = 5270A98B1BE039B600B52DB8 /* OMM.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5270A9931BE039B600B52DB8 /* OMM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5270A9881BE039B500B52DB8 /* OMM.framework */; };
@@ -92,6 +95,9 @@
 		5239503B1C14AE0F007D08B3 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		5239503C1C14AE0F007D08B3 /* OMM.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = OMM.podspec; sourceTree = "<group>"; };
 		5239503D1C14AE10007D08B3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5239507E1C14D3DB007D08B3 /* ScalarType+Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ScalarType+Date.swift"; sourceTree = "<group>"; };
+		523950801C14D410007D08B3 /* ScalarType+Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ScalarType+Data.swift"; sourceTree = "<group>"; };
+		523950821C14D43D007D08B3 /* Factory+PropertyListSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Factory+PropertyListSerialization.swift"; path = "PropertyList/Factory+PropertyListSerialization.swift"; sourceTree = "<group>"; };
 		52432B651BF3E7AA00454E12 /* RawRepresentableOptionalTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RawRepresentableOptionalTransform.swift; sourceTree = "<group>"; };
 		5270A9881BE039B500B52DB8 /* OMM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OMM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5270A98B1BE039B600B52DB8 /* OMM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMM.h; sourceTree = "<group>"; };
@@ -174,8 +180,6 @@
 		522DBC671BF15BC100FE30E4 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				522DBC681BF15BEB00FE30E4 /* ScalarType+StringBridgable.swift */,
-				522DBC6A1BF15CE100FE30E4 /* ScalarType+NumberBridgable.swift */,
 				522DBC6C1BF15D6E00FE30E4 /* Factory+JSONSerialization.swift */,
 			);
 			path = JSON;
@@ -190,6 +194,25 @@
 				5239503A1C14AE0F007D08B3 /* Cartfile.private */,
 			);
 			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		523950841C14D985007D08B3 /* PropertyList */ = {
+			isa = PBXGroup;
+			children = (
+				523950821C14D43D007D08B3 /* Factory+PropertyListSerialization.swift */,
+			);
+			name = PropertyList;
+			sourceTree = "<group>";
+		};
+		523950861C14DAC0007D08B3 /* ScalarTypes */ = {
+			isa = PBXGroup;
+			children = (
+				522DBC681BF15BEB00FE30E4 /* ScalarType+StringBridgable.swift */,
+				522DBC6A1BF15CE100FE30E4 /* ScalarType+NumberBridgable.swift */,
+				5239507E1C14D3DB007D08B3 /* ScalarType+Date.swift */,
+				523950801C14D410007D08B3 /* ScalarType+Data.swift */,
+			);
+			path = ScalarTypes;
 			sourceTree = "<group>";
 		};
 		5270A97E1BE039B500B52DB8 = {
@@ -218,9 +241,11 @@
 				5270A98D1BE039B600B52DB8 /* Info.plist */,
 				5270A98B1BE039B600B52DB8 /* OMM.h */,
 				5270A9B51BE6A54A00B52DB8 /* Core */,
-				522DBC671BF15BC100FE30E4 /* JSON */,
+				523950861C14DAC0007D08B3 /* ScalarTypes */,
 				522DBC5B1BF1581800FE30E4 /* Mappable */,
 				522DBC621BF15A5000FE30E4 /* Transforms */,
+				522DBC671BF15BC100FE30E4 /* JSON */,
+				523950841C14D985007D08B3 /* PropertyList */,
 			);
 			path = OMM;
 			sourceTree = "<group>";
@@ -408,6 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5270A9BF1BE9577F00B52DB8 /* ErrorNode.swift in Sources */,
+				5239507F1C14D3DB007D08B3 /* ScalarType+Date.swift in Sources */,
 				522DBC731BF15FF800FE30E4 /* DateTransform.swift in Sources */,
 				52432B661BF3E7AA00454E12 /* RawRepresentableOptionalTransform.swift in Sources */,
 				522DBC5D1BF1583D00FE30E4 /* Mappable.swift in Sources */,
@@ -418,6 +444,7 @@
 				52CDEC741BF14F1E008165F2 /* TransformType.swift in Sources */,
 				522DBC641BF15A8700FE30E4 /* RawRepresentableTransform.swift in Sources */,
 				522DBC6F1BF15EEB00FE30E4 /* DateFromSecondsTransform.swift in Sources */,
+				523950831C14D43D007D08B3 /* Factory+PropertyListSerialization.swift in Sources */,
 				5270A9E41BE995C300B52DB8 /* Indexable+Utils.swift in Sources */,
 				522DBC611BF158CB00FE30E4 /* MappableTransform.swift in Sources */,
 				522DBC5F1BF1588300FE30E4 /* NodeType+Mappable.swift in Sources */,
@@ -430,6 +457,7 @@
 				5270A9B91BE6A8DA00B52DB8 /* ScalarType.swift in Sources */,
 				522DBC711BF15F4100FE30E4 /* DateFromMillisecondsTransform.swift in Sources */,
 				5270A9BD1BE94A5A00B52DB8 /* MappingError.swift in Sources */,
+				523950811C14D410007D08B3 /* ScalarType+Data.swift in Sources */,
 				522DBC661BF15B3100FE30E4 /* URLTransform.swift in Sources */,
 				522DBC6B1BF15CE100FE30E4 /* ScalarType+NumberBridgable.swift in Sources */,
 				5270A9E21BE9911000B52DB8 /* ValueNode.swift in Sources */,
