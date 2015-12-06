@@ -15,19 +15,13 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'JSON' do |ss|
-    ss.source_files = "OMM/JSON/*.swift"
+    ss.source_files = "OMM/{JSON,Transforms}/*.swift"
     ss.dependency "OMM/Core"
   end
 
   s.subspec 'Mappable' do |ss|
     ss.source_files = "OMM/Mappable/*.swift"
     ss.dependency "OMM/Core"
-  end
-
-  s.subspec 'Transforms' do |ss|
-    ss.source_files = "OMM/Transforms/*.swift"
-    ss.dependency "OMM/Core"
-    ss.dependency "OMM/JSON"
   end
 
 end
