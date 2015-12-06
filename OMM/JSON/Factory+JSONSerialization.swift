@@ -9,6 +9,9 @@
 import class Foundation.NSData
 import class Foundation.NSJSONSerialization
 
+/// Creates node with raw object deserialized from given data using `NSJSONSerialization`.
+/// - Parameter data: Binary data.
+/// - Returns: Node initialized with deserialized given data.
 public
 func NodeForJSONObjectWithData(data: NSData) -> NodeType {
     do {

@@ -8,6 +8,9 @@
 
 import class Foundation.NSNull
 
+/// Creates node with given raw object.
+/// - Parameter source: Raw object.
+/// - Returns: Node initialized with given source.
 public
 func NodeForObject(source: AnyObject) -> NodeType {
     return NodeForObject(source, path: [])
