@@ -1,6 +1,6 @@
 # OMM [![GitHub MIT License](https://img.shields.io/github/license/fen-x/OMM.svg)](https://raw.githubusercontent.com/fen-x/OMM/master/LICENSE) [![GitHub Release](https://img.shields.io/github/release/fen-x/OMM.svg)](https://github.com/fen-x/OMM/releases) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage) [![CocoaPods Platform](https://img.shields.io/cocoapods/p/OMM.svg)](#)
 
-OMM is a **o**ne **m**ore **m**apper that helps to map JSON objects to Swift instances.
+OMM is a **o**ne **m**ore **m**apper that helps to map JSON and propery list objects to Swift instances.
 
 * [Features](#features)
 * [Quick Start](#quick-start)
@@ -11,6 +11,8 @@ OMM is a **o**ne **m**ore **m**apper that helps to map JSON objects to Swift ins
 
 Firstly, OMM provides only one-way conversion from JSON.
 For both to and from conversions try something else like [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON), [ObjectMapper](https://github.com/Hearst-DD/ObjectMapper) or whatever.
+
+OMM also provides one-way conversion from property list.
 
 OMM does not extend any standard types. It allows to keep clear compact API.
 
@@ -29,7 +31,8 @@ OMM gives opportunity to reuse mapping uging mappable types and custom transform
 ```swift
 import OMM
 
-let binaryDataNode = NodeForJSONObjectWithData(someNSData)
+let jsonDataNode = NodeForJSONObjectWithData(someNSData)
+let propertyListDataNode = NodeForPropertyListObjectWithData(anotherNSData)
 let anyObjectNode = NodeForObject(anyObject)
 ```
 
@@ -116,6 +119,9 @@ OMM is released under the [MIT License](https://raw.githubusercontent.com/fen-x/
 * Using [CocoaPods](https://cocoapods.org)
 ```ruby
 pod 'OMM'
+
+# to get property list suport as well
+pod 'OMM/PropertyList'
 ```
 
 * Using [Carthage](https://github.com/Carthage/Carthage)
