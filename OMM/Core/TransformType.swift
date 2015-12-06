@@ -16,6 +16,7 @@ protocol TransformType {
     /// Transforms node to value.
     /// - Parameter node: Integer value.
     /// - Returns: Result of transformation.
+    /// - Throws: Any user thrown errors.
     func applyToNode(node: NodeType) throws -> Value
 
 }
