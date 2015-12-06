@@ -19,6 +19,10 @@
 		522DBC711BF15F4100FE30E4 /* DateFromMillisecondsTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DBC701BF15F4100FE30E4 /* DateFromMillisecondsTransform.swift */; };
 		522DBC731BF15FF800FE30E4 /* DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DBC721BF15FF800FE30E4 /* DateTransform.swift */; };
 		522DBC751BF1609C00FE30E4 /* IntegerTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DBC741BF1609C00FE30E4 /* IntegerTransform.swift */; };
+		5239503E1C14AE10007D08B3 /* Cartfile.private in Resources */ = {isa = PBXBuildFile; fileRef = 5239503A1C14AE0F007D08B3 /* Cartfile.private */; };
+		5239503F1C14AE10007D08B3 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 5239503B1C14AE0F007D08B3 /* LICENSE */; };
+		523950401C14AE10007D08B3 /* OMM.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 5239503C1C14AE0F007D08B3 /* OMM.podspec */; };
+		523950411C14AE10007D08B3 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 5239503D1C14AE10007D08B3 /* README.md */; };
 		52432B661BF3E7AA00454E12 /* RawRepresentableOptionalTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52432B651BF3E7AA00454E12 /* RawRepresentableOptionalTransform.swift */; };
 		5270A98C1BE039B600B52DB8 /* OMM.h in Headers */ = {isa = PBXBuildFile; fileRef = 5270A98B1BE039B600B52DB8 /* OMM.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5270A9931BE039B600B52DB8 /* OMM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5270A9881BE039B500B52DB8 /* OMM.framework */; };
@@ -88,6 +92,10 @@
 		522DBC701BF15F4100FE30E4 /* DateFromMillisecondsTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFromMillisecondsTransform.swift; sourceTree = "<group>"; };
 		522DBC721BF15FF800FE30E4 /* DateTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTransform.swift; sourceTree = "<group>"; };
 		522DBC741BF1609C00FE30E4 /* IntegerTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegerTransform.swift; sourceTree = "<group>"; };
+		5239503A1C14AE0F007D08B3 /* Cartfile.private */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
+		5239503B1C14AE0F007D08B3 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		5239503C1C14AE0F007D08B3 /* OMM.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = OMM.podspec; sourceTree = "<group>"; };
+		5239503D1C14AE10007D08B3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		52432B651BF3E7AA00454E12 /* RawRepresentableOptionalTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RawRepresentableOptionalTransform.swift; sourceTree = "<group>"; };
 		5270A9881BE039B500B52DB8 /* OMM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OMM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5270A98B1BE039B600B52DB8 /* OMM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMM.h; sourceTree = "<group>"; };
@@ -177,12 +185,24 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
+		5239501B1C14AD98007D08B3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5239503C1C14AE0F007D08B3 /* OMM.podspec */,
+				5239503D1C14AE10007D08B3 /* README.md */,
+				5239503B1C14AE0F007D08B3 /* LICENSE */,
+				5239503A1C14AE0F007D08B3 /* Cartfile.private */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		5270A97E1BE039B500B52DB8 = {
 			isa = PBXGroup;
 			children = (
 				5270A9A51BE03B2A00B52DB8 /* OMMDemo.playground */,
 				5270A98A1BE039B600B52DB8 /* OMM */,
 				5270A9961BE039B600B52DB8 /* OMMTests */,
+				5239501B1C14AD98007D08B3 /* Supporting Files */,
 				5270A9891BE039B500B52DB8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -374,6 +394,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5239503F1C14AE10007D08B3 /* LICENSE in Resources */,
+				523950401C14AE10007D08B3 /* OMM.podspec in Resources */,
+				5239503E1C14AE10007D08B3 /* Cartfile.private in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +424,7 @@
 				52CDEC761BF1509B008165F2 /* TransformError.swift in Sources */,
 				52CDEC741BF14F1E008165F2 /* TransformType.swift in Sources */,
 				522DBC641BF15A8700FE30E4 /* RawRepresentableTransform.swift in Sources */,
+				523950411C14AE10007D08B3 /* README.md in Sources */,
 				522DBC6F1BF15EEB00FE30E4 /* DateFromSecondsTransform.swift in Sources */,
 				5270A9E41BE995C300B52DB8 /* Indexable+Utils.swift in Sources */,
 				522DBC611BF158CB00FE30E4 /* MappableTransform.swift in Sources */,
