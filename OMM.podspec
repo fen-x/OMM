@@ -8,6 +8,26 @@ Pod::Spec.new do |s|
   s.author       = { "Ivan Nikitin" => "fenix661@gmail.com" }
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/fen-x/OMM.git", :tag => "v#{s.version}" }
-  s.source_files = "OMM/**/*.swift"
   s.requires_arc = true
+
+  s.subspec 'Core' do |ss|
+    ss.source_files = "OMM/Core/*.swift"
+  end
+
+  s.subspec 'JSON' do |ss|
+    ss.source_files = "OMM/JSON/*.swift"
+    ss.dependency "OMM/Core"
+  end
+
+  s.subspec 'Mappable' do |ss|
+    ss.source_files = "OMM/Mappable/*.swift"
+    ss.dependency "OMM/Core"
+  end
+
+  s.subspec 'Transforms' do |ss|
+    ss.source_files = "OMM/Transforms/*.swift"
+    ss.dependency "OMM/Core"
+    ss.dependency "OMM/JSON"
+  end
+
 end
