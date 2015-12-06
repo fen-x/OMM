@@ -185,7 +185,7 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
-		5239501B1C14AD98007D08B3 /* Supporting Files */ = {
+		5239501B1C14AD98007D08B3 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
 				5239503C1C14AE0F007D08B3 /* OMM.podspec */,
@@ -193,7 +193,7 @@
 				5239503B1C14AE0F007D08B3 /* LICENSE */,
 				5239503A1C14AE0F007D08B3 /* Cartfile.private */,
 			);
-			name = "Supporting Files";
+			name = "Support Files";
 			sourceTree = "<group>";
 		};
 		5270A97E1BE039B500B52DB8 = {
@@ -202,7 +202,7 @@
 				5270A9A51BE03B2A00B52DB8 /* OMMDemo.playground */,
 				5270A98A1BE039B600B52DB8 /* OMM */,
 				5270A9961BE039B600B52DB8 /* OMMTests */,
-				5239501B1C14AD98007D08B3 /* Supporting Files */,
+				5239501B1C14AD98007D08B3 /* Support Files */,
 				5270A9891BE039B500B52DB8 /* Products */,
 			);
 			sourceTree = "<group>";
