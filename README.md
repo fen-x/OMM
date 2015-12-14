@@ -117,6 +117,7 @@ OMM is released under the [MIT License](https://raw.githubusercontent.com/fen-x/
 ## Installation
 
 * Using [CocoaPods](https://cocoapods.org)
+
 ```ruby
 pod 'OMM'
 
@@ -125,7 +126,15 @@ pod 'OMM/PropertyList'
 ```
 
 * Using [Carthage](https://github.com/Carthage/Carthage)
+
 ```
 github "fen-x/OMM"
 ```
+
+  1. Use `OMM4JSON.framework` for JSON only support.
+  1. Use `OMM4PropertyList.framework` for property list support.
+  1. Use `OMM.framework`for both JSON and property list support.
+
+Do not forget to use appropriate module name for import declaration: `OMM4JSON`, `OMM4PropertyList`, and `OMM`, respectively.
+
 * Using [Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
