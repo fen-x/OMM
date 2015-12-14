@@ -68,6 +68,33 @@
 		5287AC311C1F727D00D750CB /* IntegerTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DBC741BF1609C00FE30E4 /* IntegerTransform.swift */; };
 		5287AC321C1F728200D750CB /* Factory+JSONSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DBC6C1BF15D6E00FE30E4 /* Factory+JSONSerialization.swift */; };
 		5287AC331C1F72CB00D750CB /* OMM4JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 5287AC131C1F71F500D750CB /* OMM4JSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5287AC461C1F759A00D750CB /* OMM4PropertyList.h in Headers */ = {isa = PBXBuildFile; fileRef = 5287AC421C1F758300D750CB /* OMM4PropertyList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5287AC471C1F775E00D750CB /* NodeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270A9BA1BE9465A00B52DB8 /* NodeType.swift */; };
+		5287AC481C1F775E00D750CB /* ScalarType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270A9B81BE6A8DA00B52DB8 /* ScalarType.swift */; };
+		5287AC491C1F775E00D750CB /* SubscriptKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270A9B61BE6A5EA00B52DB8 /* SubscriptKey.swift */; };
+		5287AC4A1C1F775E00D750CB /* TransformType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CDEC731BF14F1E008165F2 /* TransformType.swift */; };
+		5287AC4B1C1F775E00D750CB /* MappingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270A9BC1BE94A5A00B52DB8 /* MappingError.swift */; };
+		5287AC4C1C1F775E00D750CB /* UndefinedValueError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296B0991BEC04BF001EE115 /* UndefinedValueError.swift */; };
+		5287AC4D1C1F775E00D750CB /* NullValueError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296B09B1BEC04DA001EE115 /* NullValueError.swift */; };
+		5287AC4E1C1F775E00D750CB /* UnexpectedTypeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296B09D1BEC051B001EE115 /* UnexpectedTypeError.swift */; };
+		5287AC4F1C1F775E00D750CB /* TransformError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CDEC751BF1509B008165F2 /* TransformError.swift */; };
+		5287AC501C1F775E00D750CB /* ErrorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270A9BE1BE9577F00B52DB8 /* ErrorNode.swift */; };
+		5287AC511C1F775E00D750CB /* ValueNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270A9E01BE98EC700B52DB8 /* ValueNode.swift */; };
+		5287AC521C1F775E00D750CB /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296B0951BEA7045001EE115 /* Factory.swift */; };
+		5287AC531C1F775E00D750CB /* Indexable+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270A9E31BE995C300B52DB8 /* Indexable+Utils.swift */; };
+		5287AC541C1F775E00D750CB /* SequenceType+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5270A9E51BE9977C00B52DB8 /* SequenceType+Utils.swift */; };
+		5287AC551C1F776600D750CB /* ScalarType+StringBridgable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DBC681BF15BEB00FE30E4 /* ScalarType+StringBridgable.swift */; };
+		5287AC561C1F776600D750CB /* ScalarType+NumberBridgable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DBC6A1BF15CE100FE30E4 /* ScalarType+NumberBridgable.swift */; };
+		5287AC571C1F776600D750CB /* ScalarType+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5239507E1C14D3DB007D08B3 /* ScalarType+Date.swift */; };
+		5287AC581C1F776600D750CB /* ScalarType+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523950801C14D410007D08B3 /* ScalarType+Data.swift */; };
+		5287AC591C1F776D00D750CB /* Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DBC5C1BF1583D00FE30E4 /* Mappable.swift */; };
+		5287AC5A1C1F776D00D750CB /* MappableTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DBC601BF158CB00FE30E4 /* MappableTransform.swift */; };
+		5287AC5B1C1F776D00D750CB /* NodeType+Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DBC5E1BF1588300FE30E4 /* NodeType+Mappable.swift */; };
+		5287AC5C1C1F777500D750CB /* RawRepresentableOptionalTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52432B651BF3E7AA00454E12 /* RawRepresentableOptionalTransform.swift */; };
+		5287AC5D1C1F777500D750CB /* RawRepresentableTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DBC631BF15A8700FE30E4 /* RawRepresentableTransform.swift */; };
+		5287AC5E1C1F777500D750CB /* URLTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DBC651BF15B3100FE30E4 /* URLTransform.swift */; };
+		5287AC5F1C1F777800D750CB /* IntegerTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522DBC741BF1609C00FE30E4 /* IntegerTransform.swift */; };
+		5287AC601C1F778100D750CB /* Factory+PropertyListSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523950821C14D43D007D08B3 /* Factory+PropertyListSerialization.swift */; };
 		5296B0961BEA7045001EE115 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296B0951BEA7045001EE115 /* Factory.swift */; };
 		5296B0981BEA9922001EE115 /* ValueNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296B0971BEA9922001EE115 /* ValueNodeTests.swift */; };
 		5296B09A1BEC04BF001EE115 /* UndefinedValueError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5296B0991BEC04BF001EE115 /* UndefinedValueError.swift */; };
@@ -150,6 +177,9 @@
 		5287AC081C1F6FCA00D750CB /* OMM4JSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OMM4JSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5287AC121C1F71F500D750CB /* Info4JSON.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info4JSON.plist; sourceTree = "<group>"; };
 		5287AC131C1F71F500D750CB /* OMM4JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMM4JSON.h; sourceTree = "<group>"; };
+		5287AC391C1F752600D750CB /* OMM4PropertyList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OMM4PropertyList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5287AC411C1F758300D750CB /* Info4PropertyList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info4PropertyList.plist; sourceTree = "<group>"; };
+		5287AC421C1F758300D750CB /* OMM4PropertyList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMM4PropertyList.h; sourceTree = "<group>"; };
 		5296B0951BEA7045001EE115 /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		5296B0971BEA9922001EE115 /* ValueNodeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueNodeTests.swift; sourceTree = "<group>"; };
 		5296B0991BEC04BF001EE115 /* UndefinedValueError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UndefinedValueError.swift; sourceTree = "<group>"; };
@@ -182,6 +212,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5287AC041C1F6FCA00D750CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5287AC351C1F752600D750CB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -270,6 +307,7 @@
 				5270A9881BE039B500B52DB8 /* OMM.framework */,
 				5270A9921BE039B600B52DB8 /* OMMTests.xctest */,
 				5287AC081C1F6FCA00D750CB /* OMM4JSON.framework */,
+				5287AC391C1F752600D750CB /* OMM4PropertyList.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -281,6 +319,8 @@
 				5270A98B1BE039B600B52DB8 /* OMM.h */,
 				5287AC121C1F71F500D750CB /* Info4JSON.plist */,
 				5287AC131C1F71F500D750CB /* OMM4JSON.h */,
+				5287AC411C1F758300D750CB /* Info4PropertyList.plist */,
+				5287AC421C1F758300D750CB /* OMM4PropertyList.h */,
 				5270A9B51BE6A54A00B52DB8 /* Core */,
 				523950861C14DAC0007D08B3 /* ScalarTypes */,
 				522DBC5B1BF1581800FE30E4 /* Mappable */,
@@ -383,6 +423,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5287AC361C1F752600D750CB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5287AC461C1F759A00D750CB /* OMM4PropertyList.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -441,6 +489,24 @@
 			productReference = 5287AC081C1F6FCA00D750CB /* OMM4JSON.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		5287AC381C1F752600D750CB /* OMM4PropertyList */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5287AC3E1C1F752600D750CB /* Build configuration list for PBXNativeTarget "OMM4PropertyList" */;
+			buildPhases = (
+				5287AC341C1F752600D750CB /* Sources */,
+				5287AC351C1F752600D750CB /* Frameworks */,
+				5287AC361C1F752600D750CB /* Headers */,
+				5287AC371C1F752600D750CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OMM4PropertyList;
+			productName = OMM4PropertyList;
+			productReference = 5287AC391C1F752600D750CB /* OMM4PropertyList.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -460,6 +526,9 @@
 					5287AC071C1F6FCA00D750CB = {
 						CreatedOnToolsVersion = 7.2;
 					};
+					5287AC381C1F752600D750CB = {
+						CreatedOnToolsVersion = 7.2;
+					};
 				};
 			};
 			buildConfigurationList = 5270A9821BE039B500B52DB8 /* Build configuration list for PBXProject "OMM" */;
@@ -476,6 +545,7 @@
 			targets = (
 				5270A9871BE039B500B52DB8 /* OMM */,
 				5287AC071C1F6FCA00D750CB /* OMM4JSON */,
+				5287AC381C1F752600D750CB /* OMM4PropertyList */,
 				5270A9911BE039B600B52DB8 /* OMMTests */,
 			);
 		};
@@ -497,6 +567,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5287AC061C1F6FCA00D750CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5287AC371C1F752600D750CB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -592,6 +669,39 @@
 				5287AC251C1F726800D750CB /* SequenceType+Utils.swift in Sources */,
 				5287AC291C1F727700D750CB /* MappableTransform.swift in Sources */,
 				5287AC221C1F726800D750CB /* ValueNode.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5287AC341C1F752600D750CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5287AC5A1C1F776D00D750CB /* MappableTransform.swift in Sources */,
+				5287AC501C1F775E00D750CB /* ErrorNode.swift in Sources */,
+				5287AC601C1F778100D750CB /* Factory+PropertyListSerialization.swift in Sources */,
+				5287AC4A1C1F775E00D750CB /* TransformType.swift in Sources */,
+				5287AC4D1C1F775E00D750CB /* NullValueError.swift in Sources */,
+				5287AC471C1F775E00D750CB /* NodeType.swift in Sources */,
+				5287AC491C1F775E00D750CB /* SubscriptKey.swift in Sources */,
+				5287AC5D1C1F777500D750CB /* RawRepresentableTransform.swift in Sources */,
+				5287AC4F1C1F775E00D750CB /* TransformError.swift in Sources */,
+				5287AC561C1F776600D750CB /* ScalarType+NumberBridgable.swift in Sources */,
+				5287AC481C1F775E00D750CB /* ScalarType.swift in Sources */,
+				5287AC4E1C1F775E00D750CB /* UnexpectedTypeError.swift in Sources */,
+				5287AC5C1C1F777500D750CB /* RawRepresentableOptionalTransform.swift in Sources */,
+				5287AC521C1F775E00D750CB /* Factory.swift in Sources */,
+				5287AC591C1F776D00D750CB /* Mappable.swift in Sources */,
+				5287AC5B1C1F776D00D750CB /* NodeType+Mappable.swift in Sources */,
+				5287AC4B1C1F775E00D750CB /* MappingError.swift in Sources */,
+				5287AC571C1F776600D750CB /* ScalarType+Date.swift in Sources */,
+				5287AC551C1F776600D750CB /* ScalarType+StringBridgable.swift in Sources */,
+				5287AC4C1C1F775E00D750CB /* UndefinedValueError.swift in Sources */,
+				5287AC531C1F775E00D750CB /* Indexable+Utils.swift in Sources */,
+				5287AC5E1C1F777500D750CB /* URLTransform.swift in Sources */,
+				5287AC541C1F775E00D750CB /* SequenceType+Utils.swift in Sources */,
+				5287AC511C1F775E00D750CB /* ValueNode.swift in Sources */,
+				5287AC581C1F776600D750CB /* ScalarType+Data.swift in Sources */,
+				5287AC5F1C1F777800D750CB /* IntegerTransform.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -797,6 +907,40 @@
 			};
 			name = Release;
 		};
+		5287AC3F1C1F752600D750CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/OMM/Info4PropertyList.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fen-x.omm.property-list";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5287AC401C1F752600D750CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/OMM/Info4PropertyList.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fen-x.omm.property-list";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -832,6 +976,14 @@
 			buildConfigurations = (
 				5287AC0D1C1F6FCA00D750CB /* Debug */,
 				5287AC0E1C1F6FCA00D750CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5287AC3E1C1F752600D750CB /* Build configuration list for PBXNativeTarget "OMM4PropertyList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5287AC3F1C1F752600D750CB /* Debug */,
+				5287AC401C1F752600D750CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
