@@ -9,11 +9,16 @@
 import class Foundation.NSNull
 
 /// Creates node with given raw object.
+///
 /// - Parameter source: Raw object.
 /// - Returns: Node initialized with given source.
 public
-func NodeForObject(source: AnyObject) -> NodeType {
-    return NodeForObject(source, path: [])
+func NodeForObject(@autoclosure source: () throws -> AnyObject) -> NodeType {
+    do {
+        return try NodeForObject(source(), path: [])
+    } catch {
+        return ErrorNode(error: error, path: [], recoverable: false)
+    }
 }
 
 func NodeForObject(source: AnyObject?, path: [SubscriptKey]) -> NodeType {
