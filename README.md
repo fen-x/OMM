@@ -1,6 +1,6 @@
 # OMM [![GitHub MIT License](https://img.shields.io/github/license/fen-x/OMM.svg)](https://raw.githubusercontent.com/fen-x/OMM/master/LICENSE) [![GitHub Release](https://img.shields.io/github/release/fen-x/OMM.svg)](https://github.com/fen-x/OMM/releases) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage) [![CocoaPods Platform](https://img.shields.io/cocoapods/p/OMM.svg)](#)
 
-OMM is a **o**ne **m**ore **m**apper that helps to map JSON and propery list objects to Swift instances.
+OMM is a **o**ne **m**ore **m**apper that helps to map JSON and property list objects to Swift instances.
 
 * [Features](#features)
 * [Quick Start](#quick-start)
