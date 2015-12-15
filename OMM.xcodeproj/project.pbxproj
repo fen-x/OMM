@@ -978,6 +978,7 @@
 				5287AC0E1C1F6FCA00D750CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5287AC3E1C1F752600D750CB /* Build configuration list for PBXNativeTarget "OMM4PropertyList" */ = {
 			isa = XCConfigurationList;
@@ -986,6 +987,7 @@
 				5287AC401C1F752600D750CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
