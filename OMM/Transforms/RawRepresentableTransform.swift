@@ -18,6 +18,7 @@ struct RawRepresentableTransform<T: RawRepresentable where T.RawValue: ScalarTyp
     init() { }
 
     /// Transforms node to `RawRepresentable` value.
+    ///
     /// - Parameter node: Node.
     /// - Returns: `RawRepresentable` instance.
     /// - Throws: `MappingError`, `TransformError` if there is no value represented with raw value of node.

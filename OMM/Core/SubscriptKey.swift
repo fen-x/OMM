@@ -22,6 +22,7 @@ enum SubscriptKey {
 extension SubscriptKey: IntegerLiteralConvertible {
 
     /// Creates an instance initialized to `ArrayIndex` with associated value.
+    ///
     /// - Parameter value: Integer value.
     public
     init(integerLiteral value: Int) {
@@ -34,6 +35,7 @@ extension SubscriptKey: IntegerLiteralConvertible {
 extension SubscriptKey: StringLiteralConvertible {
 
     /// Creates an instance initialized to `ObjectProperty` with associated value.
+    ///
     /// - Parameter value: String value.
     public
     init(stringLiteral value: String) {
@@ -41,6 +43,7 @@ extension SubscriptKey: StringLiteralConvertible {
     }
 
     /// Creates an instance initialized to `ObjectProperty` with associated value.
+    ///
     /// - Parameter value: String value.
     public
     init(extendedGraphemeClusterLiteral value: String) {
@@ -48,6 +51,7 @@ extension SubscriptKey: StringLiteralConvertible {
     }
 
     /// Creates an instance initialized to `ObjectProperty` with associated value.
+    ///
     /// - Parameter value: String value.
     public
     init(unicodeScalarLiteral value: String) {
@@ -76,6 +80,7 @@ extension SubscriptKey: CustomDebugStringConvertible {
 extension SubscriptKey: Equatable { }
 
 /// Compares two `SubscriptKey` instances.
+///
 /// - Parameter lhs: Left-hand side.
 /// - Parameter rhs: Right-hand side.
 /// - Returns: `true` if `lhs` is identical `rhs`; otherwise, `false`.

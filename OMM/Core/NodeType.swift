@@ -11,6 +11,7 @@ public
 protocol NodeType {
 
     /// Gets node from `self` with given key.
+    ///
     /// - Parameter key: Key to get node.
     /// - Returns: Node gotten with key.
     subscript(key: SubscriptKey) -> NodeType { get }
@@ -19,22 +20,26 @@ protocol NodeType {
     var optional: NodeType? { get }
 
     /// Gets the value of node as an array of nodes.
+    ///
     /// - Returns: Value of node as an array.
     /// - Throws: `MappingError` (true for all inbuilt `NodeType` conformaces).
     func array() throws -> [NodeType]
 
     /// Gets the value of node as a dictionaty with `String` keys and node values.
+    ///
     /// - Returns: Value of node as a dictionary.
     /// - Throws: `MappingError` (true for all inbuilt `NodeType` conformaces).
     func dictionary() throws -> [String: NodeType]
 
     /// Gets the scalar value of node casted or bridged from raw object.
+    ///
     /// - Parameter type: Type of value.
     /// - Returns: The value of scalar type.
     /// - Throws: `MappingError` (true for all inbuilt `NodeType` conformaces).
     func value<T: ScalarType>(type: T.Type) throws -> T
 
     /// Gets the value of node transformed with specified transformation.
+    ///
     /// - Parameter transform: Transfromation to apply.
     /// - Returns: Result of transformation applied to `self`.
     /// - Throws: `MappingError` (true for all inbuilt `NodeType` conformaces).
@@ -46,6 +51,7 @@ public
 extension NodeType {
 
     /// Gets node from `self` with given sequence of keys.
+    ///
     /// - Parameter path: Sequence of keys.
     /// - Returns: Node gotten with path.
     subscript(path: SubscriptKey...) -> NodeType {
@@ -53,6 +59,7 @@ extension NodeType {
     }
 
     /// Gets node from `self` with given array of keys.
+    ///
     /// - Parameter path: Array of keys.
     /// - Returns: Node gotten with path.
     subscript(path: [SubscriptKey]) -> NodeType {

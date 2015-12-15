@@ -14,6 +14,7 @@ protocol TransformType {
     typealias Value
 
     /// Transforms node to value.
+    ///
     /// - Parameter node: Node.
     /// - Returns: Result of transformation.
     /// - Throws: Any user thrown errors.
@@ -25,6 +26,7 @@ public
 extension TransformType {
 
     /// Creates an instance of `TransformError` initialized with type of `self`, it's resulting value type and given reason.
+    ///
     /// - Parameter reason: Explanation of the error reason.
     /// - Returns: Initialized instance of `TransformError`.
     func errorWithReason(reason: String) -> ErrorType {

@@ -15,6 +15,7 @@ struct RawRepresentableOptionalTransform<T: RawRepresentable where T.RawValue: S
     init() { }
 
     /// Transforms node to `RawRepresentable` value or `nil` if there is no value represented with raw value of node.
+    ///
     /// - Parameter node: Node.
     /// - Returns: `RawRepresentable` instance or `nil`.
     /// - Throws: `MappingError`.

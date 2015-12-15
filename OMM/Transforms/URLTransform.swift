@@ -17,6 +17,7 @@ struct URLTransform: TransformType {
     init() { }
 
     /// Transforms node to `NSURL` value.
+    ///
     /// - Parameter node: Node.
     /// - Returns: `NSURL` instance.
     /// - Throws: `MappingError`, `TransformError` if `String` value of node does not represent valid URL.

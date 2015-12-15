@@ -21,6 +21,7 @@ struct IntegerTransform<T: IntegerType>: TransformType {
     }
 
     /// Transforms node to integer value.
+    ///
     /// - Parameter node: Node.
     /// - Returns: Integer value.
     /// - Throws: `MappingError`.

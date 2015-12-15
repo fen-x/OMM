@@ -10,6 +10,7 @@ public
 extension NodeType {
 
     /// Gets the `Mappable` instance initialized with `self`.
+    ///
     /// - Parameter type: `Mappable` type. Defaults to inferred type.
     /// - Returns: The value of `Mappable` type.
     /// - Throws: `MappingError` (true for all inbuilt `NodeType` conformances).
@@ -18,6 +19,7 @@ extension NodeType {
     }
 
     /// Gets the array of `Mappable` instances.
+    ///
     /// - Parameter type: `Mappable` type. Defaults to inferred type.
     /// - Returns: Array of `Mappable` instances.
     /// - Throws: `MappingError` (true for all inbuilt `NodeType` conformances).
@@ -26,6 +28,7 @@ extension NodeType {
     }
 
     /// Gets the dictionaty with `String` keys and `Mappable` type values.
+    ///
     /// - Parameter type: `Mappable` type. Defaults to inferred type.
     /// - Returns: Dictionary with `String` keys and `Mappable` type values.
     /// - Throws: `MappingError` (true for all inbuilt `NodeType` conformances).

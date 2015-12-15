@@ -11,6 +11,7 @@ public
 protocol Mappable {
 
     /// Create an instance initialized with node.
+    ///
     /// - Parameter node: Node.
     /// - Throws: Any user thrown errors.
     init(node: NodeType) throws

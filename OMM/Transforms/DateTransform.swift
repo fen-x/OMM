@@ -21,6 +21,7 @@ struct DateTransform: TransformType {
     let formatter: NSDateFormatter
 
     /// Creates an instance of `DateTransform` initilized with given date format string.
+    ///
     /// - Parameter dateFormat: Date format.
     /// - Note: `en_US_POSIX` locale will be used for transformation.
     public
@@ -32,6 +33,7 @@ struct DateTransform: TransformType {
     }
 
     /// Creates an instance of `DateTransform` initilized with given date formatter.
+    ///
     /// - Parameter formatter: Date formatter.
     public
     init(formatter: NSDateFormatter) {
@@ -39,6 +41,7 @@ struct DateTransform: TransformType {
     }
 
     /// Transforms node to `NSDate` value.
+    ///
     /// - Parameter node: Node.
     /// - Returns: `NSDate` instance.
     /// - Throws: `MappingError`, `TransformError` if `String` value of node does not represent correctly formatted date.
@@ -56,6 +59,7 @@ public
 extension DateTransform {
 
     /// Date transformation working with dates formatted using ISO 8601 standard.
+    ///
     /// - Note: Transformation covers only `yyyy-MM-dd'T'HH:mm:ssZZZZZ` format.
     public
     static var ISO8601: DateTransform {

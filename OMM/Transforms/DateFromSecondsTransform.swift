@@ -19,6 +19,7 @@ struct DateFromSecondsTransform: TransformType {
     init() { }
 
     /// Transforms node to `NSDate` value.
+    ///
     /// - Parameter node: Node.
     /// - Returns: `NSDate` instance.
     /// - Throws: `MappingError`.
