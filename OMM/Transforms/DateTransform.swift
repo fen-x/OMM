@@ -11,6 +11,7 @@ import class Foundation.NSDateFormatter
 import class Foundation.NSCalendar
 import var   Foundation.NSCalendarIdentifierISO8601
 import class Foundation.NSLocale
+import class Foundation.NSTimeZone
 
 /// Transformation that transforms node to `NSDate` value
 /// in case of date represented as the formatted string.
@@ -23,12 +24,14 @@ struct DateTransform: TransformType {
     /// Creates an instance of `DateTransform` initilized with given date format string.
     ///
     /// - Parameter dateFormat: Date format.
-    /// - Note: `en_US_POSIX` locale will be used for transformation.
+    /// - Note: The formatter defaults to having the ISO 8601 calendar, `en_US_POSIX` locale and UTC time zone, for those properties.
     public
     init(dateFormat: String) {
         let formatter = NSDateFormatter()
+        formatter.calendar = NSCalendar(identifier: NSCalendarIdentifierISO8601)
         formatter.dateFormat = dateFormat
         formatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
+        formatter.timeZone = NSTimeZone(name: "UTC")
         self.init(formatter: formatter)
     }
 
@@ -61,13 +64,9 @@ extension DateTransform {
     /// Date transformation working with dates formatted using ISO 8601 standard.
     ///
     /// - Note: Transformation covers only `yyyy-MM-dd'T'HH:mm:ssZZZZZ` format.
-    public
+    @available(*, unavailable, message="Use `DateISO8601Transform` instead.") public
     static var ISO8601: DateTransform {
-        let formatter = NSDateFormatter()
-        formatter.calendar = NSCalendar(identifier: NSCalendarIdentifierISO8601)
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
-        formatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
-        return DateTransform(formatter: formatter)
+        return DateTransform(dateFormat: "yyyy-MM-dd'T'HH:mm:ssZZZZZ")
     }
     
 }
