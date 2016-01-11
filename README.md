@@ -121,7 +121,7 @@ OMM is released under the [MIT License](https://raw.githubusercontent.com/fen-x/
 ```ruby
 pod 'OMM'
 
-# to get property list suport as well
+# to get property list support as well
 pod 'OMM/PropertyList'
 ```
 
