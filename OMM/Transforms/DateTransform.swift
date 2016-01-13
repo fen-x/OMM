@@ -64,7 +64,7 @@ extension DateTransform {
     /// Date transformation working with dates formatted using ISO 8601 standard.
     ///
     /// - Note: Transformation covers only `yyyy-MM-dd'T'HH:mm:ssZZZZZ` format.
-    @available(*, unavailable, message="Use `DateISO8601Transform` instead.") public
+    public
     static var ISO8601: DateTransform {
         return DateTransform(dateFormat: "yyyy-MM-dd'T'HH:mm:ssZZZZZ")
     }
