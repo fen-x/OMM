@@ -107,7 +107,7 @@ struct RangeTransform: TransformType {
 //: Throw error to fail transform.
             throw errorWithReason("Range requires 2 indices")
         }
-        return NSRange(location: indices[0], length: indices[1])
+        return NSRange(location: indices[0], length: indices[1] - indices[0])
     }
 
 }
