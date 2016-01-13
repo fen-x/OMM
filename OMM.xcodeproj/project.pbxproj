@@ -107,6 +107,12 @@
 		52CDEC781BF15343008165F2 /* DummyTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CDEC771BF15342008165F2 /* DummyTransform.swift */; };
 		52CDEC7A1BF15406008165F2 /* DummySuccessTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CDEC791BF15406008165F2 /* DummySuccessTransform.swift */; };
 		52CDEC7C1BF15564008165F2 /* DummyFailedTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CDEC7B1BF15564008165F2 /* DummyFailedTransform.swift */; };
+		591855261C462E2B00BAE362 /* NSCalendar+ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591855231C462E2B00BAE362 /* NSCalendar+ISO8601.swift */; };
+		591855271C462E2B00BAE362 /* NSLocale+POSIX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591855241C462E2B00BAE362 /* NSLocale+POSIX.swift */; };
+		591855281C462E2B00BAE362 /* NSTimeZone+UTC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591855251C462E2B00BAE362 /* NSTimeZone+UTC.swift */; };
+		591855291C462E3900BAE362 /* NSCalendar+ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591855231C462E2B00BAE362 /* NSCalendar+ISO8601.swift */; };
+		5918552A1C462E3900BAE362 /* NSLocale+POSIX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591855241C462E2B00BAE362 /* NSLocale+POSIX.swift */; };
+		5918552B1C462E3900BAE362 /* NSTimeZone+UTC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591855251C462E2B00BAE362 /* NSTimeZone+UTC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -192,6 +198,9 @@
 		52CDEC771BF15342008165F2 /* DummyTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyTransform.swift; sourceTree = "<group>"; };
 		52CDEC791BF15406008165F2 /* DummySuccessTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummySuccessTransform.swift; sourceTree = "<group>"; };
 		52CDEC7B1BF15564008165F2 /* DummyFailedTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyFailedTransform.swift; sourceTree = "<group>"; };
+		591855231C462E2B00BAE362 /* NSCalendar+ISO8601.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSCalendar+ISO8601.swift"; sourceTree = "<group>"; };
+		591855241C462E2B00BAE362 /* NSLocale+POSIX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLocale+POSIX.swift"; sourceTree = "<group>"; };
+		591855251C462E2B00BAE362 /* NSTimeZone+UTC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimeZone+UTC.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +264,9 @@
 		522DBC671BF15BC100FE30E4 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+				591855231C462E2B00BAE362 /* NSCalendar+ISO8601.swift */,
+				591855241C462E2B00BAE362 /* NSLocale+POSIX.swift */,
+				591855251C462E2B00BAE362 /* NSTimeZone+UTC.swift */,
 				522DBC6C1BF15D6E00FE30E4 /* Factory+JSONSerialization.swift */,
 			);
 			path = JSON;
@@ -588,6 +600,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5270A9BF1BE9577F00B52DB8 /* ErrorNode.swift in Sources */,
+				591855261C462E2B00BAE362 /* NSCalendar+ISO8601.swift in Sources */,
 				5239507F1C14D3DB007D08B3 /* ScalarType+Date.swift in Sources */,
 				522DBC731BF15FF800FE30E4 /* DateTransform.swift in Sources */,
 				52432B661BF3E7AA00454E12 /* RawRepresentableOptionalTransform.swift in Sources */,
@@ -595,6 +608,7 @@
 				5296B09C1BEC04DA001EE115 /* NullValueError.swift in Sources */,
 				5296B09A1BEC04BF001EE115 /* UndefinedValueError.swift in Sources */,
 				522DBC6D1BF15D6E00FE30E4 /* Factory+JSONSerialization.swift in Sources */,
+				591855281C462E2B00BAE362 /* NSTimeZone+UTC.swift in Sources */,
 				52CDEC761BF1509B008165F2 /* TransformError.swift in Sources */,
 				52CDEC741BF14F1E008165F2 /* TransformType.swift in Sources */,
 				522DBC641BF15A8700FE30E4 /* RawRepresentableTransform.swift in Sources */,
@@ -616,6 +630,7 @@
 				522DBC661BF15B3100FE30E4 /* URLTransform.swift in Sources */,
 				522DBC6B1BF15CE100FE30E4 /* ScalarType+NumberBridgable.swift in Sources */,
 				5270A9E21BE9911000B52DB8 /* ValueNode.swift in Sources */,
+				591855271C462E2B00BAE362 /* NSLocale+POSIX.swift in Sources */,
 				522DBC691BF15BEB00FE30E4 /* ScalarType+StringBridgable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -660,11 +675,14 @@
 				5287AC281C1F727700D750CB /* Mappable.swift in Sources */,
 				5287AC1F1C1F726800D750CB /* UnexpectedTypeError.swift in Sources */,
 				5287AC231C1F726800D750CB /* Factory.swift in Sources */,
+				5918552B1C462E3900BAE362 /* NSTimeZone+UTC.swift in Sources */,
 				5287AC1C1C1F726800D750CB /* MappingError.swift in Sources */,
 				5287AC261C1F727200D750CB /* ScalarType+StringBridgable.swift in Sources */,
 				5287AC2D1C1F727D00D750CB /* URLTransform.swift in Sources */,
+				5918552A1C462E3900BAE362 /* NSLocale+POSIX.swift in Sources */,
 				5287AC2F1C1F727D00D750CB /* DateFromMillisecondsTransform.swift in Sources */,
 				5287AC1D1C1F726800D750CB /* UndefinedValueError.swift in Sources */,
+				591855291C462E3900BAE362 /* NSCalendar+ISO8601.swift in Sources */,
 				5287AC241C1F726800D750CB /* CollectionType+Utils.swift in Sources */,
 				5287AC251C1F726800D750CB /* SequenceType+Utils.swift in Sources */,
 				5287AC291C1F727700D750CB /* MappableTransform.swift in Sources */,

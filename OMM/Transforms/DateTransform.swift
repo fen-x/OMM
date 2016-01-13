@@ -9,7 +9,6 @@
 import class Foundation.NSDate
 import class Foundation.NSDateFormatter
 import class Foundation.NSCalendar
-import var   Foundation.NSCalendarIdentifierISO8601
 import class Foundation.NSLocale
 import class Foundation.NSTimeZone
 
@@ -28,10 +27,10 @@ struct DateTransform: TransformType {
     public
     init(dateFormat: String) {
         let formatter = NSDateFormatter()
-        formatter.calendar = NSCalendar(identifier: NSCalendarIdentifierISO8601)
+        formatter.calendar = NSCalendar.ISO8601
         formatter.dateFormat = dateFormat
-        formatter.locale = NSLocale(localeIdentifier: "en_US_POSIX")
-        formatter.timeZone = NSTimeZone(name: "UTC")
+        formatter.locale = NSLocale.POSIX
+        formatter.timeZone = NSTimeZone.UTC
         self.init(formatter: formatter)
     }
 
