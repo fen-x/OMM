@@ -20,6 +20,20 @@
                ReferencedContainer = "container:OMM.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5270A9911BE039B600B52DB8"
+               BuildableName = "OMMTests.xctest"
+               BlueprintName = "OMMTests"
+               ReferencedContainer = "container:OMM.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
