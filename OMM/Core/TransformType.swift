@@ -11,7 +11,7 @@ public
 protocol TransformType {
 
     /// Resulting value of transformation.
-    typealias Value
+    associatedtype Value
 
     /// Transforms node to value.
     ///
