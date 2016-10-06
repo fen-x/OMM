@@ -6,11 +6,9 @@
 //  Copyright © 2015 Ivan Nikitin. All rights reserved.
 //
 
-import class Foundation.NSURL
-
-/// Transformation that transforms node to `NSURL` value.
+/// Transformation that transforms node to `URL` value.
 public
-struct URLTransform: TransformType {
+struct URLTransform: Transform {
 
     /// Creates an instance of `URLTransform`.
     public
@@ -22,9 +20,9 @@ struct URLTransform: TransformType {
     /// - Returns: `NSURL` instance.
     /// - Throws: `MappingError`, `TransformError` if `String` value of node does not represent valid URL.
     public
-    func applyToNode(node: NodeType) throws -> NSURL {
-        guard let URL = try NSURL(string: node.value(String)) else {
-            throw errorWithReason("Invalid URL")
+    func apply(to node: Node) throws -> URL {
+        guard let URL = try URL(string: node.value(String.self)) else {
+            throw error(reason: "Invalid URL")
         }
         return URL
     }

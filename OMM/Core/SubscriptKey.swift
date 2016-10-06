@@ -11,35 +11,35 @@ public
 enum SubscriptKey {
 
     /// Array index.
-    case ArrayIndex(Int)
+    case arrayIndex(Int)
 
     /// Object property name.
-    case ObjectProperty(String)
+    case objectProperty(String)
 
 }
 
 /// `IntegerLiteralConvertible` conformance.
-extension SubscriptKey: IntegerLiteralConvertible {
+extension SubscriptKey: ExpressibleByIntegerLiteral {
 
     /// Creates an instance initialized to `ArrayIndex` with associated value.
     ///
     /// - Parameter value: Integer value.
     public
     init(integerLiteral value: Int) {
-        self = .ArrayIndex(value)
+        self = .arrayIndex(value)
     }
 
 }
 
 /// `StringLiteralConvertible` conformance.
-extension SubscriptKey: StringLiteralConvertible {
+extension SubscriptKey: ExpressibleByStringLiteral {
 
     /// Creates an instance initialized to `ObjectProperty` with associated value.
     ///
     /// - Parameter value: String value.
     public
     init(stringLiteral value: String) {
-        self = .ObjectProperty(value)
+        self = .objectProperty(value)
     }
 
     /// Creates an instance initialized to `ObjectProperty` with associated value.
@@ -47,7 +47,7 @@ extension SubscriptKey: StringLiteralConvertible {
     /// - Parameter value: String value.
     public
     init(extendedGraphemeClusterLiteral value: String) {
-        self = .ObjectProperty(value)
+        self = .objectProperty(value)
     }
 
     /// Creates an instance initialized to `ObjectProperty` with associated value.
@@ -55,7 +55,7 @@ extension SubscriptKey: StringLiteralConvertible {
     /// - Parameter value: String value.
     public
     init(unicodeScalarLiteral value: String) {
-        self = .ObjectProperty(value)
+        self = .objectProperty(value)
     }
     
 }
@@ -67,9 +67,9 @@ extension SubscriptKey: CustomDebugStringConvertible {
     public
     var debugDescription: String {
         switch self {
-        case .ArrayIndex(let index):
+        case .arrayIndex(let index):
             return String(index)
-        case .ObjectProperty(let property):
+        case .objectProperty(let property):
             return property
         }
     }
@@ -87,9 +87,9 @@ extension SubscriptKey: Equatable { }
 public
 func ==(lhs: SubscriptKey, rhs: SubscriptKey) -> Bool {
     switch (lhs, rhs) {
-    case (.ArrayIndex(let lhs), .ArrayIndex(let rhs)):
+    case (.arrayIndex(let lhs), .arrayIndex(let rhs)):
         return lhs == rhs
-    case (.ObjectProperty(let lhs), .ObjectProperty(let rhs)):
+    case (.objectProperty(let lhs), .objectProperty(let rhs)):
         return lhs == rhs
     default:
         return false

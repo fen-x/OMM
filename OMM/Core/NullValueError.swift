@@ -9,7 +9,7 @@
 /// Represents absence of retriving value.
 /// It means that raw object of node is an instance of `NSNull`.
 public
-struct NullValueError: ErrorType { }
+struct NullValueError: Error { }
 
 /// `CustomDebugStringConvertible` conformance.
 extension NullValueError: CustomDebugStringConvertible {

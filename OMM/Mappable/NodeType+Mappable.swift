@@ -7,14 +7,14 @@
 //
 
 public
-extension NodeType {
+extension Node {
 
     /// Gets the `Mappable` instance initialized with `self`.
     ///
     /// - Parameter type: `Mappable` type. Defaults to inferred type.
     /// - Returns: The value of `Mappable` type.
     /// - Throws: `MappingError` (true for all inbuilt `NodeType` conformances).
-    func value<T: Mappable>(type: T.Type = T.self) throws -> T {
+    func value<T: Mappable>(_ type: T.Type = T.self) throws -> T {
         return try value(transformedWith: MappableTransform())
     }
 
@@ -23,7 +23,7 @@ extension NodeType {
     /// - Parameter type: `Mappable` type. Defaults to inferred type.
     /// - Returns: Array of `Mappable` instances.
     /// - Throws: `MappingError` (true for all inbuilt `NodeType` conformances).
-    func array<T: Mappable>(type: T.Type = T.self) throws -> [T] {
+    func array<T: Mappable>(_ type: T.Type = T.self) throws -> [T] {
         return try array().map { try $0.value(type) }
     }
 
@@ -32,7 +32,7 @@ extension NodeType {
     /// - Parameter type: `Mappable` type. Defaults to inferred type.
     /// - Returns: Dictionary with `String` keys and `Mappable` type values.
     /// - Throws: `MappingError` (true for all inbuilt `NodeType` conformances).
-    func dictionary<T: Mappable>(type: T.Type = T.self) throws -> [String: T] {
+    func dictionary<T: Mappable>(_ type: T.Type = T.self) throws -> [String: T] {
         return try dictionary().toDictionary { try ($0, $1.value(type)) }
     }
 

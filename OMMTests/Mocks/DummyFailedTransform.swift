@@ -8,11 +8,11 @@
 
 import OMM
 
-struct DummyFailedTransform<T: ErrorType>: TransformType {
+struct DummyFailedTransform<T: Error>: Transform {
 
     let error: T
 
-    func applyToNode(node: NodeType) throws -> Any {
+    func apply(to node: Node) throws -> Any {
         throw error
     }
     

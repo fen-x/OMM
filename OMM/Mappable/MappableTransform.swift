@@ -6,9 +6,9 @@
 //  Copyright © 2015 Ivan Nikitin. All rights reserved.
 //
 
-struct MappableTransform<T: Mappable>: TransformType {
+struct MappableTransform<T: Mappable>: Transform {
 
-    func applyToNode(node: NodeType) throws -> T {
+    func apply(to node: Node) throws -> T {
         return try T(node: node)
     }
 

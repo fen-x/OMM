@@ -1,5 +1,5 @@
 //
-//  TransformType.swift
+//  Transform.swift
 //  OMM
 //
 //  Created by Ivan Nikitin on 10/11/15.
@@ -8,7 +8,7 @@
 
 /// A type that represents transformation from node to value.
 public
-protocol TransformType {
+protocol Transform {
 
     /// Resulting value of transformation.
     associatedtype Value
@@ -18,18 +18,18 @@ protocol TransformType {
     /// - Parameter node: Node.
     /// - Returns: Result of transformation.
     /// - Throws: Any user thrown errors.
-    func applyToNode(node: NodeType) throws -> Value
+    func apply(to node: Node) throws -> Value
 
 }
 
 public
-extension TransformType {
+extension Transform {
 
     /// Creates an instance of `TransformError` initialized with type of `self`, it's resulting value type and given reason.
     ///
     /// - Parameter reason: Explanation of the error reason.
     /// - Returns: Initialized instance of `TransformError`.
-    func errorWithReason(reason: String) -> ErrorType {
+    func error(reason: String) -> Error {
         return TransformError(transformType: Self.self, targetType: Self.Value.self, reason: reason)
     }
 

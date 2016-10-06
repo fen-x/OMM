@@ -6,10 +6,9 @@
 //  Copyright © 2015 Ivan Nikitin. All rights reserved.
 //
 
-extension SequenceType {
+extension Sequence {
 
-    @warn_unused_result
-    func toDictionary<Key, Value>(@noescape transform: (Self.Generator.Element) throws -> (Key, Value)) rethrows -> [Key: Value] {
+    func toDictionary<Key, Value>(transform: (Self.Iterator.Element) throws -> (Key, Value)) rethrows -> [Key: Value] {
         var result = [Key: Value]()
         for (key, value) in try map(transform) {
             result[key] = value

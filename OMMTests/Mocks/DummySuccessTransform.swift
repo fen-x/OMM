@@ -8,11 +8,11 @@
 
 import OMM
 
-struct DummySuccessTransform<T>: TransformType {
+struct DummySuccessTransform<T>: Transform {
 
     let value: T
 
-    func applyToNode(node: NodeType) throws -> T {
+    func apply(to node: Node) throws -> T {
         return value
     }
 

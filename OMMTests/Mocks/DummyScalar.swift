@@ -8,4 +8,4 @@
 
 import OMM
 
-class DummyScalar: ScalarType { }
+class DummyScalar: Scalar { }

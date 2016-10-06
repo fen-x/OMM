@@ -9,7 +9,7 @@
 /// Represents absence of retriving value
 /// It means that raw object of node does not exist.
 public
-struct UndefinedValueError: ErrorType { }
+struct UndefinedValueError: Error { }
 
 /// `CustomDebugStringConvertible` conformance.
 extension UndefinedValueError: CustomDebugStringConvertible {

@@ -8,9 +8,9 @@
 
 import OMM
 
-struct DummyTransform: TransformType {
+struct DummyTransform: Transform {
 
-    func applyToNode(node: NodeType) throws -> Any {
+    func apply(to node: Node) throws -> Any {
         fatalError("Transform not implemented")
     }
 

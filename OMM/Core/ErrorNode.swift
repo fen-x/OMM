@@ -6,32 +6,32 @@
 //  Copyright © 2015 Ivan Nikitin. All rights reserved.
 //
 
-struct ErrorNode: NodeType {
+struct ErrorNode: Node {
 
     let error: MappingError
     let recoverable: Bool
 
-    subscript(key: SubscriptKey) -> NodeType {
+    subscript(key: SubscriptKey) -> Node {
         return self
     }
 
-    var optional: NodeType? {
+    var optional: Node? {
         return recoverable ? nil : self
     }
 
-    func array() throws -> [NodeType] {
+    func array() throws -> [Node] {
         throw error
     }
 
-    func dictionary() throws -> [String: NodeType] {
+    func dictionary() throws -> [String: Node] {
         throw error
     }
 
-    func value<T: ScalarType>(type: T.Type) throws -> T {
+    func value<T: Scalar>(_ type: T.Type) throws -> T {
         throw error
     }
 
-    func value<T: TransformType>(transformedWith transform: T) throws -> T.Value {
+    func value<T: Transform>(transformedWith transform: T) throws -> T.Value {
         throw error
     }
 
@@ -39,7 +39,7 @@ struct ErrorNode: NodeType {
 
 extension ErrorNode {
 
-    init(error: ErrorType, path: [SubscriptKey], recoverable: Bool) {
+    init(error: Error, path: [SubscriptKey], recoverable: Bool) {
         self.init(
             error: MappingError(
                 underlyingError: error,

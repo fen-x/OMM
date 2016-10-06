@@ -6,4 +6,4 @@
 //  Copyright © 2015 Ivan Nikitin. All rights reserved.
 //
 
-class DummyError: ErrorType { }
+class DummyError: Error { }

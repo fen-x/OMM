@@ -18,13 +18,13 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'JSON' do |ss|
-    ss.source_files = "OMM/{JSON,ScalarTypes,Transforms}/*.swift"
-    ss.exclude_files = "OMM/ScalarTypes/ScalarType+{Date,Data}.swift"
+    ss.source_files = "OMM/{JSON,Scalars,Transforms}/*.swift"
+    ss.exclude_files = "OMM/Scalars/Scalar+{Date,Data}.swift"
     ss.dependency "OMM/Core"
   end
 
   s.subspec 'PropertyList' do |ss|
-    ss.source_files = "OMM/{PropertyList,ScalarTypes,Transforms}/*.swift"
+    ss.source_files = "OMM/{PropertyList,Scalars,Transforms}/*.swift"
     ss.exclude_files = "OMM/Transforms/Date*Transform.swift"
     ss.dependency "OMM/Core"
   end

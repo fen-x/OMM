@@ -6,13 +6,10 @@
 //  Copyright © 2015 Ivan Nikitin. All rights reserved.
 //
 
-import class  Foundation.NSDate
-import struct Foundation.NSTimeInterval
-
-/// Transformation that transforms node to `NSDate` value
+/// Transformation that transforms node to `Date` value
 /// in case of date represented as the number of **seconds** that have elapsed since 00:00:00 Coordinated Universal Time (UTC), Thursday, 1 January 1970.
 public
-struct DateFromSecondsTransform: TransformType {
+struct DateFromSecondsTransform: Transform {
 
     /// Creates an instance of `DateFromSecondsTransform`.
     public
@@ -24,8 +21,8 @@ struct DateFromSecondsTransform: TransformType {
     /// - Returns: `NSDate` instance.
     /// - Throws: `MappingError`.
     public
-    func applyToNode(node: NodeType) throws -> NSDate {
-        return try NSDate(timeIntervalSince1970: node.value(NSTimeInterval))
+    func apply(to node: Node) throws -> Date {
+        return try Date(timeIntervalSince1970: node.value(TimeInterval.self))
     }
 
 }

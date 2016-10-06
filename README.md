@@ -33,9 +33,9 @@ OMM gives opportunity to reuse mapping uging mappable types and custom transform
 ```swift
 import OMM
 
-let jsonDataNode = NodeForJSONObjectWithData(someNSData)
-let propertyListDataNode = NodeForPropertyListObjectWithData(anotherNSData)
-let anyObjectNode = NodeForObject(anyObject)
+let jsonDataNode = jsonNode(for: someNSData)
+let propertyListDataNode = propertyListNode(for: anotherNSData)
+let anyObjectNode = node(for: anyObject)
 ```
 
 ### Subscript
@@ -49,8 +49,8 @@ let nodeForMixedPath = node["property", "anotherProperty", 0]
 ### Materialization
 
 ```swift
-let intValue = try node.value(Int)
-let arrayOfStrings = try node.array(String)
+let intValue = try node.value(Int.self)
+let arrayOfStrings = try node.array(String.self)
 ```
 
 ### Error handling
@@ -70,26 +70,26 @@ do {
 
 ```swift
 do {
-	let intValue = try node.optional?.value(Int)
+	let intValue = try node.optional?.value(Int.self)
 	// intValue contains optional integer value
 } catch {
 	// Value is not number
 }
 
-let stringValue = try? node.value(String)
+let stringValue = try? node.value(String.self)
 // stringValue contains optional string value anyway
 ```
 
 ### Transforms
 
 ```swift
-let URLValue = try node.value(transformedWith: URLTransform())
+let urlValue = try node.value(transformedWith: URLTransform())
 
-struct LengthTransform: TransformType {
-	func applyToNode(node: NodeType) throws -> Double {
-		let value = try node.value(Double)
+struct LengthTransform: Transform {
+	func apply(to node: Node) throws -> Double {
+		let value = try node.value(Double.self)
 		if value < 0 {
-			throw errorWithReason("Length should be non-negative")
+			throw error(reason: "Length should be non-negative")
 		}
 		return value
 	}
@@ -104,9 +104,9 @@ struct User: Mappable {
 	let identifier: Int64
 	let name: String 
 
-	init(node: NodeType) throws {
+	init(node: Node) throws {
 		identifier = try node["user_id"].required.value(transformedWith: Int64Transform)
-		name = try node["user_name"].optional?.value(String) ?? ""
+		name = try node["user_name"].optional?.value(String.self) ?? ""
 	}
 }
 let user = try node.value(User)
@@ -135,7 +135,7 @@ github "fen-x/OMM"
 
   1. Use `OMM4JSON.framework` for JSON only support.
   1. Use `OMM4PropertyList.framework` for property list support.
-  1. Use `OMM.framework`for both JSON and property list support.
+  1. Use `OMM.framework` for both JSON and property list support.
 
 Do not forget to use appropriate module name for import declaration: `OMM4JSON`, `OMM4PropertyList`, and `OMM`, respectively.
 

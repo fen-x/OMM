@@ -8,7 +8,7 @@
 
 /// Represents transformation failure.
 public
-struct TransformError: ErrorType {
+struct TransformError: Error {
 
     /// Type of failed transformation.
     public

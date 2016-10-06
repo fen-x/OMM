@@ -8,11 +8,11 @@
 
 /// Represents error occured during mapping proccess.
 public
-struct MappingError: ErrorType {
+struct MappingError: Error {
 
     /// An error that was encountered in an underlying implementation and caused the error that the receiver represents to occur.
     public
-    let underlyingError: ErrorType
+    let underlyingError: Error
 
     /// Path from the root node to node that has thrown error.
     public
@@ -26,7 +26,7 @@ extension MappingError: CustomDebugStringConvertible {
     /// A textual representation, suitable for debugging.
     public
     var debugDescription: String {
-        let path = self.path.map { String($0) }.joinWithSeparator(".")
+        let path = self.path.map { String(describing: $0) }.joined(separator: ".")
         return "\(underlyingError) at \"\(path)\""
     }
 

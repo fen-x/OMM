@@ -6,19 +6,13 @@
 //  Copyright © 2015 Ivan Nikitin. All rights reserved.
 //
 
-import class Foundation.NSDate
-import class Foundation.NSDateFormatter
-import class Foundation.NSCalendar
-import class Foundation.NSLocale
-import class Foundation.NSTimeZone
-
-/// Transformation that transforms node to `NSDate` value
+/// Transformation that transforms node to `Date` value
 /// in case of date represented as the formatted string.
 public
-struct DateTransform: TransformType {
+struct DateTransform: Transform {
 
     private
-    let formatter: NSDateFormatter
+    let formatter: DateFormatter
 
     /// Creates an instance of `DateTransform` initilized with given date format string.
     ///
@@ -26,11 +20,11 @@ struct DateTransform: TransformType {
     /// - Note: The formatter defaults to having the ISO 8601 calendar, `en_US_POSIX` locale and UTC time zone, for those properties.
     public
     init(dateFormat: String) {
-        let formatter = NSDateFormatter()
-        formatter.calendar = NSCalendar.ISO8601
+        let formatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: Calendar.Identifier.iso8601)
         formatter.dateFormat = dateFormat
-        formatter.locale = NSLocale.POSIX
-        formatter.timeZone = NSTimeZone.UTC
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.timeZone = TimeZone(abbreviation: "UTC")
         self.init(formatter: formatter)
     }
 
@@ -38,8 +32,8 @@ struct DateTransform: TransformType {
     ///
     /// - Parameter formatter: Date formatter.
     public
-    init(formatter: NSDateFormatter) {
-        self.formatter = formatter.copy() as! NSDateFormatter
+    init(formatter: DateFormatter) {
+        self.formatter = formatter.copy() as! DateFormatter
     }
 
     /// Transforms node to `NSDate` value.
@@ -48,9 +42,9 @@ struct DateTransform: TransformType {
     /// - Returns: `NSDate` instance.
     /// - Throws: `MappingError`, `TransformError` if `String` value of node does not represent correctly formatted date.
     public
-    func applyToNode(node: NodeType) throws -> NSDate {
-        guard let value = try formatter.dateFromString(node.value(String)) else {
-            throw errorWithReason("Unexpected date format")
+    func apply(to node: Node) throws -> Date {
+        guard let value = try formatter.date(from: node.value(String.self)) else {
+            throw error(reason: "Unexpected date format")
         }
         return value
     }

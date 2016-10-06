@@ -14,6 +14,6 @@ protocol Mappable {
     ///
     /// - Parameter node: Node.
     /// - Throws: Any user thrown errors.
-    init(node: NodeType) throws
+    init(node: Node) throws
 
 }

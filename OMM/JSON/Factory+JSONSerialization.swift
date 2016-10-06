@@ -6,14 +6,11 @@
 //  Copyright © 2015 Ivan Nikitin. All rights reserved.
 //
 
-import class Foundation.NSData
-import class Foundation.NSJSONSerialization
-
-/// Creates node with raw object deserialized from given data using `NSJSONSerialization`.
+/// Creates node with raw object deserialized from given data using `JSONSerialization`.
 ///
 /// - Parameter data: Binary data.
 /// - Returns: Node initialized with deserialized given data.
 public
-func NodeForJSONObjectWithData(data: NSData) -> NodeType {
-    return NodeForObject(try NSJSONSerialization.JSONObjectWithData(data, options: []))
+func jsonNode(for data: Data) -> Node {
+    return node(for: try JSONSerialization.jsonObject(with: data))
 }

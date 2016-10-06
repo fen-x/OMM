@@ -8,7 +8,7 @@
 
 /// Represents the situation when raw object could not be casted or bridget to an expected type.
 public
-struct UnexpectedTypeError: ErrorType {
+struct UnexpectedTypeError: Error {
 
     /// Expected type necessary to complete requested operation.
     public

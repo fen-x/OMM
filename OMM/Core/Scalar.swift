@@ -1,5 +1,5 @@
 //
-//  ScalarType.swift
+//  Scalar.swift
 //  OMM
 //
 //  Created by Ivan Nikitin on 01/11/15.
@@ -10,4 +10,4 @@
 ///
 /// - Remark: Do not declare new conformances to this protocol; they will not work as expected.
 public
-protocol ScalarType { }
+protocol Scalar { }

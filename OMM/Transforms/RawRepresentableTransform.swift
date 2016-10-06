@@ -8,7 +8,7 @@
 
 /// Transformation that transforms node to `RawRepresentable` value.
 public
-struct RawRepresentableTransform<T: RawRepresentable where T.RawValue: ScalarType>: TransformType {
+struct RawRepresentableTransform<T: RawRepresentable>: Transform where T.RawValue: Scalar {
 
     private
     let transform = RawRepresentableOptionalTransform<T>()
@@ -23,9 +23,9 @@ struct RawRepresentableTransform<T: RawRepresentable where T.RawValue: ScalarTyp
     /// - Returns: `RawRepresentable` instance.
     /// - Throws: `MappingError`, `TransformError` if there is no value represented with raw value of node.
     public
-    func applyToNode(node: NodeType) throws -> T {
-        guard let value = try transform.applyToNode(node) else {
-            throw errorWithReason("Unexpected raw value")
+    func apply(to node: Node) throws -> T {
+        guard let value = try transform.apply(to: node) else {
+            throw error(reason: "Unexpected raw value")
         }
         return value
     }

@@ -6,14 +6,11 @@
 //  Copyright © 2015 Ivan Nikitin. All rights reserved.
 //
 
-import class Foundation.NSData
-import class Foundation.NSPropertyListSerialization
-
-/// Creates node with raw object deserialized from given data using `NSPropertyListSerialization`.
+/// Creates node with raw object deserialized from given data using `PropertyListSerialization`.
 ///
 /// - Parameter data: Binary data.
 /// - Returns: Node initialized with deserialized given data.
 public
-func NodeForPropertyListObjectWithData(data: NSData) -> NodeType {
-    return NodeForObject(try NSPropertyListSerialization.propertyListWithData(data, options: [], format: nil))
+func propertyListNode(for data: Data) -> Node {
+    return node(for: try PropertyListSerialization.propertyList(from: data, format: nil))
 }

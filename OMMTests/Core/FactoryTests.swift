@@ -16,35 +16,32 @@ class FactoryTests: XCTestCase {
 
     func test_ReturnsErrorNodeForNil() {
         let path = [1, 0, "test"] as [SubscriptKey]
-        let node = NodeForObject(nil, path: path)
 
-        expect(node as? ErrorNode) == ErrorNode(
-            error: UndefinedValueError(),
-            path: path,
-            recoverable: true
-        )
+        expect(node(for: nil, at: path) as? ErrorNode).to(satisfy {
+            expect($0.error.underlyingError is UndefinedValueError).to(beTrue())
+            expect($0.error.path) == path
+            expect($0.recoverable).to(beTrue())
+        })
     }
 
     func test_ReturnsErrorNodeForNull() {
         let path = [1, 0, "test"] as [SubscriptKey]
-        let node = NodeForObject(NSNull(), path: path)
 
-        expect(node as? ErrorNode) == ErrorNode(
-            error: NullValueError(),
-            path: path,
-            recoverable: true
-        )
+        expect(node(for: NSNull(), at: path) as? ErrorNode).to(satisfy {
+            expect($0.error.underlyingError is NullValueError).to(beTrue())
+            expect($0.error.path) == path
+            expect($0.recoverable).to(beTrue())
+        })
     }
 
     func test_ReturnsValueNodeWithGivenObject() {
         let source = DummyScalar()
         let path = [1, 0, "test"] as [SubscriptKey]
-        let node = NodeForObject(source, path: path)
 
-        expect(node as? ValueNode) == ValueNode(
-            source: source,
-            path: path
-        )
+        expect(node(for: source, at: path) as? ValueNode).to(satisfy {
+            expect($0.source) === source
+            expect($0.path) == path
+        })
     }
 
 }

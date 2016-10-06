@@ -21,8 +21,16 @@ class ErrorNodeTests: XCTestCase {
             recoverable: true
         )
 
-        expect(node[42] as? ErrorNode) == node
-        expect(node[""] as? ErrorNode) == node
+        expect(node[42] as? ErrorNode).to(satisfy {
+            expect($0.error.underlyingError) === node.error.underlyingError
+            expect($0.error.path) == node.error.path
+            expect($0.recoverable) == node.recoverable
+        })
+        expect(node[""] as? ErrorNode).to(satisfy {
+            expect($0.error.underlyingError) === node.error.underlyingError
+            expect($0.error.path) == node.error.path
+            expect($0.recoverable) == node.recoverable
+        })
     }
 
     func test_OptionalPropertyReturnsNilIfNodeIsRecoverable() {
@@ -42,7 +50,11 @@ class ErrorNodeTests: XCTestCase {
             recoverable: false
         )
 
-        expect(node.optional as? ErrorNode) == node
+        expect(node.optional as? ErrorNode).to(satisfy {
+            expect($0.error.underlyingError) === node.error.underlyingError
+            expect($0.error.path) == node.error.path
+            expect($0.recoverable) == node.recoverable
+        })
     }
 
     func test_ValueMethodThrowsGivenMappingError() {
@@ -52,8 +64,9 @@ class ErrorNodeTests: XCTestCase {
             recoverable: true
         )
 
-        expect(try node.value(DummyScalar)).to(throwError { (error: MappingError) in
-            expect(error) == node.error
+        expect(try node.value(DummyScalar.self)).to(throwError { (error: MappingError) in
+            expect(error.underlyingError) === node.error.underlyingError
+            expect(error.path) == node.error.path
         })
     }
 
@@ -65,7 +78,8 @@ class ErrorNodeTests: XCTestCase {
         )
 
         expect(try node.value(transformedWith: DummyTransform())).to(throwError { (error: MappingError) in
-            expect(error) == node.error
+            expect(error.underlyingError) === node.error.underlyingError
+            expect(error.path) == node.error.path
         })
     }
 
@@ -77,7 +91,8 @@ class ErrorNodeTests: XCTestCase {
         )
 
         expect(try node.array()).to(throwError { (error: MappingError) in
-            expect(error) == node.error
+            expect(error.underlyingError) === node.error.underlyingError
+            expect(error.path) == node.error.path
         })
     }
 
@@ -89,7 +104,8 @@ class ErrorNodeTests: XCTestCase {
         )
 
         expect(try node.dictionary()).to(throwError { (error: MappingError) in
-            expect(error) == node.error
+            expect(error.underlyingError) === node.error.underlyingError
+            expect(error.path) == node.error.path
         })
     }
 

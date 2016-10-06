@@ -17,7 +17,7 @@ class Tweet: Mappable {
     var user: User!
 
     private(set)
-    var created: NSDate!
+    var created: Date!
 
     private(set)
     var retweetedStatus: Tweet?
@@ -43,9 +43,9 @@ class Tweet: Mappable {
     private(set)
     var favoriteCount: Int!
 
-//: Provide initilizer that takes `NodeType`. `NodeType` is the protocol that represents any JSON.
+//: Provide initilizer that takes `Node`. `Node` is the protocol that represents any JSON.
     required
-    init(node: NodeType) throws {
+    init(node: Node) throws {
 //: Use subscript syntax to access JSON object properties and array elements. Feel free to apply a number of keys one by one and use both string and integer literals.
 //:
 //: Use `optional` property to get something that could be `null` or undefined safetly. Use `required` property to get non-optional result or error. Actually, `required` returns the same node and it is ok to skip it. It only exists to make clear intent.
@@ -60,16 +60,16 @@ class Tweet: Mappable {
 //:
 //: Use the `dictionary()` method to get a string to node dictionary.
         id = try node["id"].required.value(transformedWith: Int64Transform)
-        user = try node["user"].required.value(User)
+        user = try node["user"].required.value(User.self)
         created = try node["created_at"].required.value(transformedWith: DateTransform(dateFormat: "eee MMM dd HH:mm:ss ZZZZ yyyy"))
-        retweetedStatus = try node["retweeted_status"].optional?.value(Tweet)
-        text = try node["text"].required.value(String)
-        URLs = try node["entities", "urls"].optional?.array(URLEntity) ?? []
-        hashtags = try node["entities", "hashtags"].optional?.array(HashtagEntity) ?? []
-        userMentions = try node["entities", "user_mentions"].optional?.array(UserMentionEntity) ?? []
-        media = try node["entities", "media"].optional?.array(MediaEntity) ?? []
-        retweetCount = try node["retweet_count"].optional?.value(Int) ?? 0
-        favoriteCount = try node["favorite_count"].optional?.value(Int) ?? 0
+        retweetedStatus = try node["retweeted_status"].optional?.value(Tweet.self)
+        text = try node["text"].required.value(String.self)
+        URLs = try node["entities", "urls"].optional?.array(URLEntity.self) ?? []
+        hashtags = try node["entities", "hashtags"].optional?.array(HashtagEntity.self) ?? []
+        userMentions = try node["entities", "user_mentions"].optional?.array(UserMentionEntity.self) ?? []
+        media = try node["entities", "media"].optional?.array(MediaEntity.self) ?? []
+        retweetCount = try node["retweet_count"].optional?.value(Int.self) ?? 0
+        favoriteCount = try node["favorite_count"].optional?.value(Int.self) ?? 0
     }
 
 }
@@ -81,31 +81,31 @@ struct User: Mappable {
     let name: String
     let screenName: String
 
-    let profileImageURL: NSURL
+    let profileImageURL: URL
 
     let description: String?
     let descriptionURLs: [URLEntity]
 
-    init(node: NodeType) throws {
-        name = try node["name"].required.value(String)
-        screenName = try node["screen_name"].required.value(String)
+    init(node: Node) throws {
+        name = try node["name"].required.value(String.self)
+        screenName = try node["screen_name"].required.value(String.self)
         profileImageURL = try node["profile_image_url"].required.value(transformedWith: URLTransform())
-        description = try node["description"].optional?.value(String)
-        descriptionURLs = try node["entities", "description", "urls"].optional?.array(URLEntity) ?? []
+        description = try node["description"].optional?.value(String.self)
+        descriptionURLs = try node["entities", "description", "urls"].optional?.array(URLEntity.self) ?? []
     }
 }
 
 //: ## Transform
 //: Transform is another way to make reusable code converting JSON to instance of some type whether it is `Mappable` or not. There are a number of inbuilt transforms such as `URLTransform` and defining custom transforms is pretty simple.
 
-struct RangeTransform: TransformType {
+struct RangeTransform: Transform {
 
 //: One method to convert JSON represented with `NodeType` instance to instance of any other type.
-    func applyToNode(node: NodeType) throws -> NSRange {
-        let indices = try node.array(Int)
+    func apply(to node: Node) throws -> NSRange {
+        let indices = try node.array(Int.self)
         guard indices.count == 2 else {
 //: Throw error to fail transform.
-            throw errorWithReason("Range requires 2 indices")
+            throw error(reason: "Range requires 2 indices")
         }
         return NSRange(location: indices[0], length: indices[1] - indices[0])
     }
@@ -118,7 +118,7 @@ class Entity: Mappable {
     var range: NSRange!
 
     required
-    init(node: NodeType) throws {
+    init(node: Node) throws {
 //: Same way to apply custom transform as for inbuilt transforms.
         range = try node["indices"].required.value(transformedWith: RangeTransform())
     }
@@ -134,9 +134,9 @@ class HashtagEntity: Entity {
     var text: String!
 
     required
-    init(node: NodeType) throws {
+    init(node: Node) throws {
         try super.init(node: node)
-        text = try node["text"].required.value(String)
+        text = try node["text"].required.value(String.self)
     }
 
 }
@@ -147,9 +147,9 @@ class UserMentionEntity: Entity {
     var screenName: String!
 
     required
-    init(node: NodeType) throws {
+    init(node: Node) throws {
         try super.init(node: node)
-        screenName = try node["screen_name"].required.value(String)
+        screenName = try node["screen_name"].required.value(String.self)
     }
 
 }
@@ -157,16 +157,16 @@ class UserMentionEntity: Entity {
 class URLEntity: Entity {
 
     private(set)
-    var URL: NSURL!
+    var url: URL!
 
     private(set)
     var displayURL: String!
 
     required
-    init(node: NodeType) throws {
+    init(node: Node) throws {
         try super.init(node: node)
-        URL = try node["url"].required.value(transformedWith: URLTransform())
-        displayURL = try node["display_url"].required.value(String)
+        url = try node["url"].required.value(transformedWith: URLTransform())
+        displayURL = try node["display_url"].required.value(String.self)
     }
 
 }
@@ -177,35 +177,34 @@ class MediaEntity: URLEntity {
     var size: (width: Int, height: Int)!
 
     required
-    init(node: NodeType) throws {
+    init(node: Node) throws {
         try super.init(node: node)
         size = try (
-            width: node["sizes", "large", "w"].required.value(Int),
-            height: node["sizes", "large", "h"].required.value(Int)
+            width: node["sizes", "large", "w"].required.value(Int.self),
+            height: node["sizes", "large", "h"].required.value(Int.self)
         )
     }
-    
+
 }
 
 //: ## In Action
 //:
 //: Use one of following functions to get node:
-//: 1. `NodeForObject(_:)`
-//: 1. `NodeForJSONObjectWithData(_:)`
+//: 1. `node(for:)`
+//: 1. `jsonNode(for:)`
 //:
 //: _Tweet JSON has been taken from the official Twitter documentation ([GET statuses/show/:id](https://dev.twitter.com/rest/reference/get/statuses/show/:id))._
 
-let path = NSBundle.mainBundle().pathForResource("210462857140252672", ofType: "json")!
-let data = NSData(contentsOfFile: path)!
-let node = NodeForJSONObjectWithData(data)
+let path = Bundle.main.url(forResource: "210462857140252672", withExtension: "json")!
+let data = try! Data(contentsOf: path)
+let node = jsonNode(for: data)
 
 do {
 //: Convert JSON to the object of expected type.
-    let tweet = try node.value(Tweet)
+    let tweet = try node.value(Tweet.self)
 
 } catch {
 //: All methods throw error of `MappingError` type. There are `underlyingError` tells what exactly is wrong and `path` from the root object to problem JSON.
     error
 
 }
-
