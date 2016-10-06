@@ -36,10 +36,10 @@ struct DateTransform: Transform {
         self.formatter = formatter.copy() as! DateFormatter
     }
 
-    /// Transforms node to `NSDate` value.
+    /// Transforms node to `Date` value.
     ///
     /// - Parameter node: Node.
-    /// - Returns: `NSDate` instance.
+    /// - Returns: `Date` instance.
     /// - Throws: `MappingError`, `TransformError` if `String` value of node does not represent correctly formatted date.
     public
     func apply(to node: Node) throws -> Date {
@@ -58,7 +58,7 @@ extension DateTransform {
     ///
     /// - Note: Transformation covers only `yyyy-MM-dd'T'HH:mm:ssZZZZZ` format.
     public
-    static var ISO8601: DateTransform {
+    static var iso8601: DateTransform {
         return DateTransform(dateFormat: "yyyy-MM-dd'T'HH:mm:ssZZZZZ")
     }
     

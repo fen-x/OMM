@@ -15,10 +15,10 @@ struct DateFromSecondsTransform: Transform {
     public
     init() { }
 
-    /// Transforms node to `NSDate` value.
+    /// Transforms node to `Date` value.
     ///
     /// - Parameter node: Node.
-    /// - Returns: `NSDate` instance.
+    /// - Returns: `Date` instance.
     /// - Throws: `MappingError`.
     public
     func apply(to node: Node) throws -> Date {

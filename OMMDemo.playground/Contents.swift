@@ -59,7 +59,7 @@ class Tweet: Mappable {
 //: Use one of the `array(_:)` convenience methods to get an array of converted instances.
 //:
 //: Use the `dictionary()` method to get a string to node dictionary.
-        id = try node["id"].required.value(transformedWith: Int64Transform)
+        id = try node["id"].required.value(transformedWith: int64Transform)
         user = try node["user"].required.value(User.self)
         created = try node["created_at"].required.value(transformedWith: DateTransform(dateFormat: "eee MMM dd HH:mm:ss ZZZZ yyyy"))
         retweetedStatus = try node["retweeted_status"].optional?.value(Tweet.self)

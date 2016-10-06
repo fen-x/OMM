@@ -14,10 +14,10 @@ struct URLTransform: Transform {
     public
     init() { }
 
-    /// Transforms node to `NSURL` value.
+    /// Transforms node to `URL` value.
     ///
     /// - Parameter node: Node.
-    /// - Returns: `NSURL` instance.
+    /// - Returns: `URL` instance.
     /// - Throws: `MappingError`, `TransformError` if `String` value of node does not represent valid URL.
     public
     func apply(to node: Node) throws -> URL {

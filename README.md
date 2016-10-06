@@ -35,8 +35,8 @@ OMM gives opportunity to reuse mapping uging mappable types and custom transform
 ```swift
 import OMM
 
-let jsonDataNode = jsonNode(for: someNSData)
-let propertyListDataNode = propertyListNode(for: anotherNSData)
+let jsonDataNode = jsonNode(for: someData)
+let propertyListDataNode = propertyListNode(for: anotherData)
 let anyObjectNode = node(for: anyObject)
 ```
 
