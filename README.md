@@ -59,12 +59,12 @@ let arrayOfStrings = try node.array(String.self)
 
 ```swift
 do {
-	let intValue: Int = try node.value()
-	// intValue contains non-optional integer value	
+    let intValue: Int = try node.value()
+    // intValue contains non-optional integer value	
 } catch let error as MappingError {
-	// There is no value or value is not number
+    // There is no value or value is not number
 } catch {
-	// Actually, never happens
+    // Actually, never happens
 }
 ```
 
@@ -72,10 +72,10 @@ do {
 
 ```swift
 do {
-	let intValue = try node.optional?.value(Int.self)
-	// intValue contains optional integer value
+    let intValue = try node.optional?.value(Int.self)
+    // intValue contains optional integer value
 } catch {
-	// Value is not number
+    // Value is not number
 }
 
 let stringValue = try? node.value(String.self)
@@ -88,13 +88,13 @@ let stringValue = try? node.value(String.self)
 let urlValue = try node.value(transformedWith: URLTransform())
 
 struct LengthTransform: Transform {
-	func apply(to node: Node) throws -> Double {
-		let value = try node.value(Double.self)
-		if value < 0 {
-			throw error(reason: "Length should be non-negative")
-		}
-		return value
-	}
+    func apply(to node: Node) throws -> Double {
+        let value = try node.value(Double.self)
+        if value < 0 {
+            throw error(reason: "Length should be non-negative")
+        }
+        return value
+    }
 }
 let length = try node.value(transformedWith: LengthTransform())
 ```
@@ -103,13 +103,13 @@ let length = try node.value(transformedWith: LengthTransform())
 
 ```swift
 struct User: Mappable {
-	let identifier: Int64
-	let name: String 
+    let identifier: Int64
+    let name: String 
 
-	init(node: Node) throws {
-		identifier = try node["user_id"].required.value(transformedWith: Int64Transform)
-		name = try node["user_name"].optional?.value(String.self) ?? ""
-	}
+    init(node: Node) throws {
+        identifier = try node["user_id"].required.value(transformedWith: Int64Transform)
+        name = try node["user_name"].optional?.value(String.self) ?? ""
+    }
 }
 let user = try node.value(User)
 ```
