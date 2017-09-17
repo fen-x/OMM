@@ -24,9 +24,9 @@ OMM supports Swift error handling.
 
 OMM provides subscript syntax to get values from both objects and arrays.
 
-OMM allows to to distinguish absence of value and wrong value.
+OMM allows to distinguish absence of value and wrong value.
 
-OMM gives opportunity to reuse mapping uging mappable types and custom transforms.
+OMM gives opportunity to reuse mapping using mappable types and custom transforms.
 
 ## Quick Start
 
