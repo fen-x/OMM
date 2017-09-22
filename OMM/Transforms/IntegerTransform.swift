@@ -8,7 +8,7 @@
 
 /// Transformation that transforms node to integer value that accessible from `NSNumber` but can not be simply casted or bridged.
 public
-struct IntegerTransform<T: Integer>: Transform {
+struct IntegerTransform<T: BinaryInteger>: Transform {
 
     private
     let transform: (NSNumber) -> T
