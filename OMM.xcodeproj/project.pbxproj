@@ -263,7 +263,7 @@
 		52CDEC771BF15342008165F2 /* DummyTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyTransform.swift; sourceTree = "<group>"; };
 		52CDEC791BF15406008165F2 /* DummySuccessTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummySuccessTransform.swift; sourceTree = "<group>"; };
 		52CDEC7B1BF15564008165F2 /* DummyFailedTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyFailedTransform.swift; sourceTree = "<group>"; };
-		52F780A11DA5B23C001B6569 /* OMMDemo.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = OMMDemo.playground; sourceTree = "<group>"; };
+		52F780A11DA5B23C001B6569 /* OMMDemo.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = OMMDemo.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		52F780A31DA5BB87001B6569 /* Satisfy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Satisfy.swift; sourceTree = "<group>"; };
 		591764161CB44E5D00DF6D4E /* OMM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OMM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5917644B1CB4590C00DF6D4E /* OMM4JSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OMM4JSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
