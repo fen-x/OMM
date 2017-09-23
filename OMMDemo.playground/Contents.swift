@@ -8,40 +8,30 @@ import OMM
 //: ## Mappable Class
 //: There is an exmaple of how to make `Mappable` class below.
 
+final
 class Tweet: Mappable {
-//: Unfortunately, Swift does not allow to throw error from initializer before all stored properties of a class instance initialized. That is why constatnt properties with non-optional type are not suitable.
-    private(set)
-    var id: Int64!
 
-    private(set)
-    var user: User!
+    let id: Int64
 
-    private(set)
-    var created: Date!
+    let user: User
 
-    private(set)
-    var retweetedStatus: Tweet?
+    let created: Date
 
-    private(set)
-    var text: String!
+    let retweetedStatus: Tweet?
 
-    private(set)
-    var URLs: [URLEntity]!
+    let text: String
 
-    private(set)
-    var hashtags: [HashtagEntity]!
+    let URLs: [URLEntity]
 
-    private(set)
-    var userMentions: [UserMentionEntity]!
+    let hashtags: [HashtagEntity]
 
-    private(set)
-    var media: [MediaEntity]!
+    let userMentions: [UserMentionEntity]
 
-    private(set)
-    var retweetCount: Int!
+    let media: [MediaEntity]
 
-    private(set)
-    var favoriteCount: Int!
+    let retweetCount: Int
+
+    let favoriteCount: Int
 
 //: Provide initilizer that takes `Node`. `Node` is the protocol that represents any JSON.
     required
@@ -60,16 +50,16 @@ class Tweet: Mappable {
 //:
 //: Use the `dictionary()` method to get a string to node dictionary.
         id = try node["id"].required.value(transformedWith: int64Transform)
-        user = try node["user"].required.value(User.self)
+        user = try node["user"].required.value()
         created = try node["created_at"].required.value(transformedWith: DateTransform(dateFormat: "eee MMM dd HH:mm:ss ZZZZ yyyy"))
-        retweetedStatus = try node["retweeted_status"].optional?.value(Tweet.self)
-        text = try node["text"].required.value(String.self)
-        URLs = try node["entities", "urls"].optional?.array(URLEntity.self) ?? []
-        hashtags = try node["entities", "hashtags"].optional?.array(HashtagEntity.self) ?? []
-        userMentions = try node["entities", "user_mentions"].optional?.array(UserMentionEntity.self) ?? []
-        media = try node["entities", "media"].optional?.array(MediaEntity.self) ?? []
-        retweetCount = try node["retweet_count"].optional?.value(Int.self) ?? 0
-        favoriteCount = try node["favorite_count"].optional?.value(Int.self) ?? 0
+        retweetedStatus = try node["retweeted_status"].optional?.value()
+        text = try node["text"].required.value()
+        URLs = try node["entities", "urls"].optional?.array() ?? []
+        hashtags = try node["entities", "hashtags"].optional?.array() ?? []
+        userMentions = try node["entities", "user_mentions"].optional?.array() ?? []
+        media = try node["entities", "media"].optional?.array() ?? []
+        retweetCount = try node["retweet_count"].optional?.value() ?? 0
+        favoriteCount = try node["favorite_count"].optional?.value() ?? 0
     }
 
 }
@@ -87,11 +77,11 @@ struct User: Mappable {
     let descriptionURLs: [URLEntity]
 
     init(node: Node) throws {
-        name = try node["name"].required.value(String.self)
-        screenName = try node["screen_name"].required.value(String.self)
+        name = try node["name"].required.value()
+        screenName = try node["screen_name"].required.value()
         profileImageURL = try node["profile_image_url"].required.value(transformedWith: URLTransform())
-        description = try node["description"].optional?.value(String.self)
-        descriptionURLs = try node["entities", "description", "urls"].optional?.array(URLEntity.self) ?? []
+        description = try node["description"].optional?.value()
+        descriptionURLs = try node["entities", "description", "urls"].optional?.array() ?? []
     }
 }
 
@@ -113,7 +103,7 @@ struct RangeTransform: Transform {
 }
 
 class Entity: Mappable {
-
+//: Unfortunately, Swift does not allow to throw error from initializer before all stored properties of a class instance initialized. That is why constatnt properties with non-optional type are not suitable.
     private(set)
     var range: NSRange!
 
@@ -180,8 +170,8 @@ class MediaEntity: URLEntity {
     init(node: Node) throws {
         try super.init(node: node)
         size = try (
-            width: node["sizes", "large", "w"].required.value(Int.self),
-            height: node["sizes", "large", "h"].required.value(Int.self)
+            width: node["sizes", "large", "w"].required.value(),
+            height: node["sizes", "large", "h"].required.value()
         )
     }
 
@@ -201,7 +191,7 @@ let node = jsonNode(for: data)
 
 do {
 //: Convert JSON to the object of expected type.
-    let tweet = try node.value(Tweet.self)
+    let _ = try node.value(Tweet.self)
 
 } catch {
 //: All methods throw error of `MappingError` type. There are `underlyingError` tells what exactly is wrong and `path` from the root object to problem JSON.
