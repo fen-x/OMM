@@ -13,7 +13,7 @@ struct ValueNode: Node {
 
     subscript(key: SubscriptKey) -> Node {
         do {
-            return try node(for: subsource(at: key), at: path + [key])
+            return try makeNode(for: subsource(at: key), at: path + [key])
         } catch {
             return ErrorNode(error: error, path: path, recoverable: false)
         }

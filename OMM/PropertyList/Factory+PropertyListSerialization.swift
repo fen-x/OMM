@@ -11,6 +11,6 @@
 /// - Parameter data: Binary data.
 /// - Returns: Node initialized with deserialized given data.
 public
-func propertyListNode(for data: Data) -> Node {
-    return node(for: try PropertyListSerialization.propertyList(from: data, format: nil))
+func makeNode(forPropertyList data: Data) -> Node {
+    return makeNode(for: try PropertyListSerialization.propertyList(from: data, format: nil))
 }

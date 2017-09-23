@@ -187,7 +187,7 @@ class MediaEntity: URLEntity {
 
 let path = Bundle.main.url(forResource: "210462857140252672", withExtension: "json")!
 let data = try! Data(contentsOf: path)
-let node = jsonNode(for: data)
+let node = makeNode(forJSON: data)
 
 do {
 //: Convert JSON to the object of expected type.

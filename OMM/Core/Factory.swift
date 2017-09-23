@@ -11,15 +11,15 @@
 /// - Parameter source: Raw object.
 /// - Returns: Node initialized with given source.
 public
-func node(for source: @autoclosure () throws -> Any) -> Node {
+func makeNode(for source: @autoclosure () throws -> Any) -> Node {
     do {
-        return try node(for: source(), at: [])
+        return try makeNode(for: source(), at: [])
     } catch {
         return ErrorNode(error: error, path: [], recoverable: false)
     }
 }
 
-func node(for source: Any?, at path: [SubscriptKey]) -> Node {
+func makeNode(for source: Any?, at path: [SubscriptKey]) -> Node {
     guard let source = source else {
         return ErrorNode(error: UndefinedValueError(), path: path, recoverable: true)
     }

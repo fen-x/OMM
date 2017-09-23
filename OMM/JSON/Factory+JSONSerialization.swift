@@ -11,6 +11,6 @@
 /// - Parameter data: Binary data.
 /// - Returns: Node initialized with deserialized given data.
 public
-func jsonNode(for data: Data) -> Node {
-    return node(for: try JSONSerialization.jsonObject(with: data))
+func makeNode(forJSON data: Data) -> Node {
+    return makeNode(for: try JSONSerialization.jsonObject(with: data))
 }
