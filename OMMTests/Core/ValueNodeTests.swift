@@ -172,7 +172,7 @@ class ValueNodeTests: XCTestCase {
 
         expect(try node.dictionary() as? [String: ValueNode]).to(satisfy {
             expect($0).to(haveCount(1))
-            expect($0.keys).to(contain("key"))
+            expect(Array($0.keys)).to(contain("key"))
             expect($0["key"]?.source as? Int) == value
             expect($0["key"]?.path) == node.path + ["key"]
         })
