@@ -141,7 +141,7 @@ class ValueNodeTests: XCTestCase {
             path: ["test", 42]
         )
 
-        expect(try node.array().flatMap { $0 as? ValueNode }).to(satisfy {
+        expect(try node.array().compactMap { $0 as? ValueNode }).to(satisfy {
             expect($0).to(haveCount(1))
             expect($0[0].source as? Int) == value
             expect($0[0].path) == node.path + [0]
