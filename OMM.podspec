@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name         = "OMM"
   s.version      = "0.7.0"
   s.summary      = "OMM is a one more mapper that helps to map JSON and property list objects to Swift instances."
-  s.description  = "OMM has clear compact API, supports Swift error handling, provides subscript syntax, allows to to distinguish absence of value and wrong value, and gives opportunity to reuse mapping uging mappable types and custom transforms."
+  s.description  = "OMM has clear compact API, supports Swift error handling, provides subscript syntax, allows to to distinguish absence of value and wrong value, and gives opportunity to reuse mapping using mappable types and custom transforms."
   s.homepage     = "https://github.com/fen-x/OMM"
   s.license      = { :type => "MIT" }
   s.author       = { "Ivan Nikitin" => "fenix661@gmail.com" }
@@ -10,6 +10,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.ios.deployment_target = "8.0"
   s.tvos.deployment_target = "9.0"
+  s.watchos.deployment_target = "2.0"
 
   s.default_subspecs = 'JSON', 'Mappable'
 
