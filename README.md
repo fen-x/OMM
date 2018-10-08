@@ -2,11 +2,6 @@
 
 OMM is a **o**ne **m**ore **m**apper that helps to map JSON and property list objects to Swift instances.
 
-It is now updated to Swift 4.0.
-Swift 3.0 compatibile version is [0.6](https://github.com/fen-x/OMM/releases/tag/v0.6.0).
-Swift 2.2 compatibile version is [0.5](https://github.com/fen-x/OMM/releases/tag/v0.5.0).
-Swift 2.1 compatibile version is [0.4](https://github.com/fen-x/OMM/releases/tag/v0.4.0).
-
 * [Features](#features)
 * [Quick Start](#quick-start)
 * [License](#license)
