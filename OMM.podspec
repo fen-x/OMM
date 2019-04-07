@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.author        = { 'Ivan Nikitin' => 'fenix661@gmail.com' }
   s.source        = { :git => 'https://github.com/fen-x/OMM.git', :tag => "v#{s.version}" }
   s.requires_arc  = true
-  s.swift_version = '4.2'
+  s.swift_version = '5.0'
 
   # swift_version became available
   s.cocoapods_version = '>= 1.4.0'
