@@ -56,7 +56,7 @@ let arrayOfStrings = try node.array(String.self)
 ```swift
 do {
     let intValue: Int = try node.value()
-    // intValue contains non-optional integer value	
+    // intValue contains non-optional integer value
 } catch let error as MappingError {
     // There is no value or value is not number
 } catch {
@@ -100,7 +100,7 @@ let length = try node.value(transformedWith: LengthTransform())
 ```swift
 struct User: Mappable {
     let identifier: Int64
-    let name: String 
+    let name: String
 
     init(node: Node) throws {
         identifier = try node["user_id"].required.value(transformedWith: Int64Transform)
