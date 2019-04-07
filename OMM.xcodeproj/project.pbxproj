@@ -914,7 +914,7 @@
 			};
 			buildConfigurationList = 5270A9821BE039B500B52DB8 /* Build configuration list for PBXProject "OMM" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
